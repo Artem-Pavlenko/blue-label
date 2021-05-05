@@ -1,0 +1,22 @@
+@import "variables";
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin container() {
+  width: 100%;
+  min-height: calc(100vh - #{$headerHeight});
+}
+
+@mixin boxShadow() {
+  box-shadow: 0 8px 8px $firstBoxShadowColor, 0 8px 16px $secBoxShadowColor;
+}

@@ -1,0 +1,111 @@
+@import "src/App/common/style/mixins";
+
+
+@mixin listIcon() {
+  position: absolute;
+  top: 0;
+  left: -105px;
+  width: 100%;
+  height: 100%;
+}
+
+.navBarWrapper {
+  @include flex(flex-start, center);
+  position: relative;
+  z-index: 2;
+
+  .mainBlock {
+    @include flexCenter();
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    color: var(--primary-purpl);
+    background: url('../../../assets/images/icons/border.svg') center no-repeat;
+  }
+
+  .arrow {
+    margin-left: 15px;
+    transition: all .3s ease-out;
+
+    &.active {
+      img {
+        transform: rotateX(180deg);
+        transition: all .3s ease-in;
+      }
+    }
+
+    img {
+      width: 10px;
+    }
+  }
+
+  .navList {
+    @include boxShadow();
+    width: 210px;
+    position: absolute;
+    top: 48px;
+    left: -135px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s linear;
+    background: var(--secondary-dark-gray);
+    border-radius: 3px;
+    padding: 14px 0 12px 46px;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      transition: all .3s linear;
+    }
+
+    a {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 21px;
+      padding: 6px 0;
+      color: var(--primary-gray);
+      transition: all .3s ease-out;
+
+      &:hover {
+        color: var(--promary-white);
+        transition: all .4s ease-out;
+
+        .nameIcon {
+          transition: all .4s ease-in;
+          background: url("../../../assets/images/icons/user_icon_hover.svg") center no-repeat;
+        }
+
+        .profileIcon {
+          transition: all .4s ease-in;
+          background: url("../../../assets/images/icons/settings_hover.svg") center no-repeat;
+        }
+
+        .logoutIcon {
+          transition: all .4s ease-in;
+          background: url("../../../assets/images/icons/logout_hover.svg") center no-repeat;
+        }
+      }
+    }
+
+    .nameIcon {
+      @include listIcon();
+      background: url("../../../assets/images/icons/user_icon.svg") center no-repeat;
+
+      &:hover {
+        background: url("../../../assets/images/icons/user_icon_hover.svg") center no-repeat;
+      }
+    }
+
+    .profileIcon {
+      @include listIcon();
+      background: url("../../../assets/images/icons/setting.svg") center no-repeat;
+    }
+
+    .logoutIcon {
+      @include listIcon();
+      background: url("../../../assets/images/icons/logout.svg") center no-repeat;
+    }
+  }
+}
