@@ -20,3 +20,17 @@
 @mixin boxShadow() {
   box-shadow: 0 8px 8px $firstBoxShadowColor, 0 8px 16px $secBoxShadowColor;
 }
+
+@mixin button () {
+  height: 44px;
+  padding: 0 10px;
+  background: linear-gradient(206.97deg, #E35CE6 -1.5%, #5E5CE6 65.04%);
+  border-radius: 15px;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}

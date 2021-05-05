@@ -20,12 +20,23 @@ a {
     text-decoration: none;
 }
 
+
+input, textarea, button {
+    outline: none;
+}
+
+a, a:active {
+    text-decoration: none;
+}
+
+
 :root {
     --primary-dark-gray: #2C2C2E;
     --secondary-dark-gray: #3A3A3C;
     --primary-gray: #6F6F74;
+    --secondary-gray: #65656A;
     --primary-purpl: #5E5CE6;
-    --promary-white: #FFFFFF;
+    --white: #FFFFFF;
     --primary-border: #525156;
     --secondary-border: #3D3C41;
 }

@@ -22,12 +22,12 @@ const Login = () => {
                 <h4>LOG IN TO YOUR ACCOUNT</h4>
                 <form onSubmit={handleSubmit(submitHandler)}>
                     <div className={s.emailBlock}>
-                        <input id="email" {...register('email')}/>
+                        <input type="email" id="email" {...register('email')}/>
                         <label htmlFor="email">Email</label>
                     </div>
                     <div className={s.passBlock}>
-                        <input id="email" {...register('password')}/>
-                        <label htmlFor="email">Password</label>
+                        <input type="password" id="password" {...register('password')}/>
+                        <label htmlFor="password">Password</label>
                     </div>
                     <button>LOGIN</button>
                 </form>
