@@ -1,13 +1,21 @@
 import React from 'react'
-import DropDownNavBar from "../../atoms/DropDownNavBar/DropDownNavBar";
+import {useSelector} from 'react-redux'
+import cn from 'classnames'
+import DropDownNavBar from '../../atoms/DropDownNavBar/DropDownNavBar'
 import purpleBubble from '../../../assets/images/background/purple_bubble.svg'
 import blueBubble from '../../../assets/images/background/blue_bubble.svg'
-import s from './LoginHeader.module.scss'
+import {StateType} from '../../../store/store'
+import {AuthStateType} from '../../../types/authTypes'
+import s from './Header.module.scss'
+import NavBar from "../../molecules/NavBar/NavBar";
 
-const LoginHeader = () => {
+const Header = () => {
+    const {auth} = useSelector<StateType, AuthStateType>(state => state.auth)
+
     return (
         <div className={s.headerWrapper}>
-            <header className={s.headerBlock}>
+            <header className={cn(s.headerBlock, {[s.auth]: auth})}>
+                {auth && <NavBar />}
                 <DropDownNavBar/>
             </header>
             <div className={s.background}>
@@ -20,4 +28,4 @@ const LoginHeader = () => {
     )
 }
 
-export default LoginHeader
+export default Header

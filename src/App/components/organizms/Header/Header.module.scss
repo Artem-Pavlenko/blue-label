@@ -10,6 +10,9 @@
     height: 80px;
     width: 100%;
     background-color: var(--primary-dark-gray);
+    &.auth {
+      justify-content: space-between;
+    }
   }
   .background {
     position: fixed;

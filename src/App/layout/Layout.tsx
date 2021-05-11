@@ -1,13 +1,13 @@
 import React from 'react'
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
-import LoginHeader from '../components/organizms/LoginHeader/LoginHeader'
+import Header from '../components/organizms/Header/Header'
 import {pages} from '../routes/routes'
 
 
 const Layout = () => {
     return (
         <BrowserRouter>
-            <LoginHeader/>
+            <Header/>
             <Switch>
                 {
                     pages.map(({path, Component}) =>

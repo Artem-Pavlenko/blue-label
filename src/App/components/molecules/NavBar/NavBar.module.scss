@@ -1,0 +1,32 @@
+@import "src/App/common/style/variables";
+@import "src/App/common/style/mixins";
+
+.navBar {
+  height: 100%;
+  width: 100%;
+  padding-left: 90px;
+  display: flex;
+  .mainGroup, .secGroup, .restGroup {
+    height: 100%;
+    @include flex(flex-start, center);
+    margin-right: 25px;
+  }
+
+  .mainGroup {
+
+  }
+
+  .secGroup {
+
+  }
+
+  .restGroup {
+    margin-right: 0;
+    img {
+      margin-right: 25px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

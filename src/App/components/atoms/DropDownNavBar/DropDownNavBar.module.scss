@@ -13,10 +13,10 @@
   @include flex(flex-start, center);
   position: relative;
   z-index: 2;
+  cursor: pointer;
 
   .mainBlock {
     @include flexCenter();
-    cursor: pointer;
     width: 45px;
     height: 45px;
     color: var(--primary-blue);

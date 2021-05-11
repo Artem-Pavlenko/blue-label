@@ -1,0 +1,50 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+@mixin hoverActiveLink () {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: -5%;
+  width: 110%;
+  height: 2px;
+  background: linear-gradient(206.97deg, #E35CE6 -1.5%, #5E5CE6 65.04%);
+  border-radius: 15px;
+  animation: hoverActive .5s ease-in forwards;
+}
+
+a {
+  @include flexCenter();
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 31px;
+  color: var(--gray);
+  transition: all .5s ease-out;
+  margin-right: 30px;
+  height: 100%;
+
+  &:hover {
+    &:after {
+      @include hoverActiveLink();
+    }
+  }
+
+  &.active {
+    color: var(--white);
+    transition: all .5s ease-in;
+    &:after {
+     @include hoverActiveLink();
+    }
+  }
+}
+
+
+@keyframes hoverActive {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
