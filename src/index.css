@@ -35,8 +35,10 @@ a, a:active {
     --secondary-dark-gray: #3A3A3C;
     --primary-gray: #6F6F74;
     --secondary-gray: #65656A;
-    --primary-purpl: #5E5CE6;
+    --primary-blue: #5E5CE6;
+    --primary-purple: #E35CE6;
     --white: #FFFFFF;
     --primary-border: #525156;
     --secondary-border: #3D3C41;
+    --error-red: #D73B3B;
 }

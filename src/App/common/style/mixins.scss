@@ -22,9 +22,15 @@
 }
 
 @mixin button () {
+  background-size: 100%;
+  //background: linear-gradient(206.97deg, var(--primary-purple) -1.5%, var(--primary-blue) 65.04%);
+  background: linear-gradient(340.97deg, var(--primary-purple) -1.5%, var(--primary-blue) 60.04%);
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+
   height: 44px;
   padding: 0 10px;
-  background: linear-gradient(206.97deg, #E35CE6 -1.5%, #5E5CE6 65.04%);
   border-radius: 15px;
   font-size: 16px;
   line-height: 25px;
@@ -33,4 +39,26 @@
   cursor: pointer;
   border: none;
   outline: none;
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+
+    border-radius: inherit;
+    background: linear-gradient(214deg, var(--primary-blue) 9.48%, var(--primary-purple) 89.38%);
+    box-shadow: 0 10px 9px rgba(0, 0, 0, 0.26);
+    transition: 1s;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
 }
