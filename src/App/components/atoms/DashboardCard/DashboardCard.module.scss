@@ -1,0 +1,34 @@
+@import "src/App/common/style/variables";
+@import "src/App/common/style/mixins";
+
+.dashboardCard {
+  @include flex(space-between, center);
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 23.5%;
+  min-width: 185px;
+  height: 131px;
+  background: #474078;
+  box-shadow: $boxShadow;
+
+  .date, .description {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    opacity: 0.8;
+  }
+  .date {
+    padding-top: 7.5px;
+  }
+  .money {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 46px;
+    //letter-spacing: 0.02em;
+    color: var(--white);
+  }
+  .description {
+   padding-bottom: 13.5px;
+  }
+}

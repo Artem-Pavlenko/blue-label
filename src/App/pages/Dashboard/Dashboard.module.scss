@@ -2,5 +2,51 @@
 @import "src/App/common/style/variables";
 
 .dashboard {
-
+  @include container();
+  //@include flex(flex-start, flex-start);
+  //flex-direction: column;
+  h3 {
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    margin-top: 32px;
+    margin-bottom: 41px;
+  }
+  .dashboardCards {
+    @include flex(space-between, center);
+    margin-bottom: 33px;
+  }
+  .main {
+    width: 100%;
+    height: 433px;
+    @include flex(flex-start, flex-start);
+    .upcomingReminders {
+      width: 35.5%;
+      height: 100%;
+      margin-right: 30px;
+      background: var(--primary-dark-gray);
+      box-shadow: $boxShadow;
+      p, span {
+        padding-left: 31px;
+      }
+      p {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 54px;
+        color: var(--white);
+        border-bottom: 1px solid #3D3C41;
+        margin-bottom: 16px;
+      }
+      span {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: var(--secondary-gray);
+      }
+    }
+    .affiliates {
+      width: calc(75% - 30px);
+    }
+  }
 }

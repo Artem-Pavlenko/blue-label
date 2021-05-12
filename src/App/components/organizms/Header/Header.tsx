@@ -2,14 +2,15 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 import cn from 'classnames'
 import NavBar from '../../molecules/NavBar/NavBar'
+import Search from '../../molecules/Search/Search'
+import Notification from '../../molecules/Notification/Notification'
 import DropDownNavBar from '../../atoms/DropDownNavBar/DropDownNavBar'
 import purpleBubble from '../../../assets/images/background/purple_bubble.svg'
 import blueBubble from '../../../assets/images/background/blue_bubble.svg'
 import {StateType} from '../../../store/store'
 import {AuthRootType} from '../../../types/authTypes'
 import s from './Header.module.scss'
-import Notification from "../../molecules/Notification/Notification";
-import Search from "../../molecules/Search/Search";
+
 
 const Header = () => {
     const {auth} = useSelector<StateType, AuthRootType>(state => state.auth)
