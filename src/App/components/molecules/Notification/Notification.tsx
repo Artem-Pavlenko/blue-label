@@ -4,7 +4,7 @@ import s from './Notification.module.scss'
 
 
 const Notification = () => {
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(true)
 
     const notifications = [
         {text: 'Ramon Otte (Client) has logged in', time: '3 months ago'},

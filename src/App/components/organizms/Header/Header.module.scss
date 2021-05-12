@@ -17,6 +17,7 @@
     .wrapper {
       @include flex(flex-end, center);
       width: 50%;
+      height: 100%;
     }
   }
 

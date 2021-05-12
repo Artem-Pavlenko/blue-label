@@ -49,11 +49,24 @@
     }
 
     .item {
-      padding: 36px 24px;
       @include flex(space-between, center);
+      padding: 0 24px;
+      margin-bottom: 36px;
 
       &:first-of-type {
         padding-top: 0;
+      }
+
+      &:hover {
+        span {
+          color: var(--white);
+          transition: color .3s ease-in;
+        }
+
+        .time {
+          color: #9C9C9D;
+          transition: color .3s ease-in;
+        }
       }
 
       span {
@@ -61,6 +74,7 @@
         line-height: 20px;
         letter-spacing: 0.25px;
         color: #9C9C9D;
+        transition: color .3s ease-out;
       }
 
       .time {
@@ -68,12 +82,12 @@
         line-height: 16px;
         letter-spacing: 0.4px;
         color: #1C1C1E;
+        transition: color .3s ease-out;
       }
     }
 
     button {
       @include button();
-      //width: 100%;
       width: 460px;
       box-sizing: border-box;
       margin: 0 24px 14px;
