@@ -4,7 +4,7 @@ export type AuthDataType = {
     lastname: string
 }
 
-export type AuthStateType = {
+export type AuthRootType = {
     auth: boolean
     email: string
     name: string

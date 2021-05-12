@@ -21,12 +21,26 @@
   box-shadow: 0 8px 8px $firstBoxShadowColor, 0 8px 16px $secBoxShadowColor;
 }
 
-@mixin button () {
+@mixin input() {
+  height: 48px;
+  width: 100%;
+  padding-left: 16px;
+  background: inherit;
+  border: 1px solid var(--secondary-border);
+  border-radius: 4px;
+  color: var(--white);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.75px;
+}
+
+@mixin button() {
   background-size: 100%;
   //background: linear-gradient(206.97deg, var(--primary-purple) -1.5%, var(--primary-blue) 65.04%);
   background: linear-gradient(340.97deg, var(--primary-purple) -1.5%, var(--primary-blue) 60.04%);
   position: relative;
-  z-index: 100;
+  z-index: 1;
   display: inline-block;
 
   height: 44px;

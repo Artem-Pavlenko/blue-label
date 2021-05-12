@@ -1,8 +1,8 @@
-import {AuthStateType} from '../../types/authTypes'
+import {AuthRootType} from '../../types/authTypes'
 import {setAuth} from "../actions/authActions";
 
 
-const initialState: AuthStateType = {
+const initialState: AuthRootType = {
     auth: true,
     email: "",
     name: "",
@@ -10,7 +10,7 @@ const initialState: AuthStateType = {
 }
 
 
-export const authReducer = (state = initialState, action: Actions): AuthStateType => {
+export const authReducer = (state = initialState, action: Actions): AuthRootType => {
     switch (action.type) {
         case "SET_AUTH":
             return {...state, ...action.payload}

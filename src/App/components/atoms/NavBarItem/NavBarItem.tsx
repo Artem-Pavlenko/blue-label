@@ -9,7 +9,7 @@ type NavBarItem = {
 
 const NavBarItem: React.FC<NavBarItem> = ({name, path}) => {
     return (
-        <NavLink to={path} activeClassName={s.active}>
+        <NavLink className={s.navBarItem} to={path} activeClassName={s.active}>
             {name}
         </NavLink>
     );

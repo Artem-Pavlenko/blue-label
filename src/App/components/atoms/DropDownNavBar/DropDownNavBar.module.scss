@@ -10,7 +10,7 @@
 }
 
 .navBarWrapper {
-  @include flex(flex-start, center);
+  @include flex(flex-end, center);
   position: relative;
   z-index: 2;
   cursor: pointer;
