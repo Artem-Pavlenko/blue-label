@@ -7,6 +7,22 @@
   color: var(--white);
   border-bottom: 1px solid #525156;
   @include flex(flex-start, center);
+  &.item {
+    color: var(--dark-gray);
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(180deg, rgba(94, 92, 230, 0.15) 0%, rgba(186, 92, 230, 0.15) 141.68%);
+      color: var(--white);
+    }
+    .name, .leads, .ftd, .deposits, .withdrawals, .netDeposit {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: 0.4px;
+      color: inherit;
+    }
+
+  }
   .name, .leads, .ftd, .deposits, .withdrawals, .netDeposit {
     text-align: center;
     font-weight: 700;
@@ -18,24 +34,24 @@
   .name {
     padding-left: 19px;
     text-align: left;
-    width: 30%;
+    width: $nameWidth;
     img {
       margin-left: 8.5px;
     }
   }
   .leads {
-    width: 10%;
+    width: $leadsWidth;
   }
   .ftd {
-    width: 10%;
+    width: $ftdWidth;
   }
   .deposits {
-    width: 20%;
+    width: $depositsWidth;
   }
   .withdrawals {
-    width: 20%;
+    width: $withdrawalsWidth;
   }
   .netDeposit {
-    width: 20%;
+    width: $netDepositWidth;
   }
 }

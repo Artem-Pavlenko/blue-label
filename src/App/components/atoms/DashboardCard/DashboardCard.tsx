@@ -2,13 +2,13 @@ import React from 'react'
 import s from './DashboardCard.module.scss'
 
 
-type DashboardCard = {
+type DashboardCardType = {
     date: string
     money: number
     description: string
 }
 
-const DashboardCard: React.FC<DashboardCard> = ({date, description, money}) => {
+const DashboardCard: React.FC<DashboardCardType> = ({date, description, money}) => {
     return (
         <div className={s.dashboardCard}>
             <div className={s.date}>

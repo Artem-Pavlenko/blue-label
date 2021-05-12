@@ -1,0 +1,58 @@
+@import "src/App/common/style/mixins";
+
+
+.paginator {
+  width: 100%;
+  height: 69px;
+  @include flex(flex-end, center);
+  span {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: var(--dark-gray);
+    margin-right: 14px;
+    padding-bottom: 5px;
+  }
+  .leftArrow, .left, .right, .rightArrow {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    transition: all .3s ease-out;
+  }
+  .leftArrow {
+    margin-right: 28px;
+    background: url("../../../assets/images/icons/arrow - left.svg") center no-repeat;
+    &:hover {
+      background: url("../../../assets/images/icons/arrow - left_hover.svg") center no-repeat;
+      transition: all .3s ease-in;
+    }
+  }
+  .left {
+      margin-right: 12px;
+      background: url("../../../assets/images/icons/left.svg") center no-repeat;
+    &:hover {
+      background: url("../../../assets/images/icons/left_hover.svg") center no-repeat;
+    }
+  }
+  .count {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.3px;
+    color: var(--dark-gray);
+  }
+  .right {
+    margin-left: 12px;
+    background: url("../../../assets/images/icons/right.svg") center no-repeat;
+    &:hover {
+      background: url("../../../assets/images/icons/right_hover.svg") center no-repeat;
+    }
+  }
+  .rightArrow {
+    margin: 0 28px;
+    background: url("../../../assets/images/icons/arrow - right.svg") center no-repeat;
+    &:hover {
+      background: url("../../../assets/images/icons/arrow - right_hover.svg") center no-repeat;
+    }
+  }
+}

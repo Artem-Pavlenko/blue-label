@@ -30,12 +30,14 @@
         padding-left: 31px;
       }
       p {
+        @include flex(flex-start, flex-end);
+        height: 70px;
+        margin: 0 0 16px 0;
         font-weight: 600;
         font-size: 30px;
         line-height: 54px;
         color: var(--white);
         border-bottom: 1px solid #3D3C41;
-        margin-bottom: 16px;
       }
       span {
         display: inline-block;
