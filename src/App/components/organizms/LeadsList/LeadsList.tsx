@@ -1,11 +1,11 @@
 import React from 'react'
 import LeadsListHeader from '../../atoms/LeadsListHeader/LeadsListHeader'
+import LeadListItem, {Lead} from '../../atoms/LeadListItem/LeadListItem'
+import Paginator from '../../molecules/Paginator/Paginator'
 import s from './LeadsList.module.scss'
-import LeadListItem, {Lead} from "../../atoms/LeadListItem/LeadListItem";
-import Paginator from "../../molecules/Paginator/Paginator";
 
 
-const LeadsList = () => {
+const LeadsList: React.FC = () => {
     const leadsItems: Lead[] = [
         {
             lead: 'Uwe Seibold',

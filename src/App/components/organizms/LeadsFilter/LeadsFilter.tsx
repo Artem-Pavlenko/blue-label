@@ -4,11 +4,11 @@ import FilterLeadsBlock from '../../molecules/FilterLeadsBlock/FilterLeadsBlock'
 import s from './LeadsFilter.module.scss'
 
 
-const LeadsFilter = () => {
+const LeadsFilter: React.FC = () => {
     return (
         <div className={s.leadsFilter}>
-            <ManagerBlock />
-            <FilterLeadsBlock />
+            <ManagerBlock/>
+            <FilterLeadsBlock/>
         </div>
     )
 }

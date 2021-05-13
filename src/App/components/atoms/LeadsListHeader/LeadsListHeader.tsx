@@ -3,7 +3,7 @@ import Checkbox from '../Checkbox/Checkbox'
 import s from './LeadsListHeader.module.scss'
 
 
-const LeadsListHeader = () => {
+const LeadsListHeader: React.FC = () => {
     return (
         <div className={s.leadsListHeader}>
             <div className={s.lead}>

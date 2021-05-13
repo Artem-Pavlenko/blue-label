@@ -2,7 +2,7 @@ import React from 'react'
 import s from './Paginator.module.scss'
 
 
-const Paginator = () => {
+const Paginator: React.FC = () => {
     return (
         <div className={s.paginator}>
             <span>Rows per page:</span>

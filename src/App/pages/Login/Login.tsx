@@ -19,7 +19,7 @@ const LoginSchema = Yup.object().shape({
     password: Yup.string().required('is required').min(8, 'length must be at least 8 characters')
 });
 
-const Login = () => {
+const Login: React.FC = () => {
     const dispatch = useDispatch()
     const history = useHistory()
 

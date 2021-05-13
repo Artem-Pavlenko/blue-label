@@ -4,11 +4,11 @@ import LeadsList from '../../components/organizms/LeadsList/LeadsList'
 import s from './Leads.module.scss'
 
 
-const Leads = () => {
+const Leads: React.FC = () => {
     return (
         <div className={s.leads}>
             <LeadsFilter/>
-            <LeadsList />
+            <LeadsList/>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import Affiliates from '../../components/molecules/AffiliatItem/Affiliates'
 import s from './Dashboard.module.scss'
 
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
 
     const dashCards = [
         {date: 'Jan 5th 21 - Jan 5th 21', money: 0, description: 'New Leads'},
@@ -26,7 +26,7 @@ const Dashboard = () => {
                     <p>Upcoming Reminders</p>
                     <span>NO UPCOMING REMINDERS.</span>
                 </div>
-               <Affiliates/>
+                <Affiliates/>
             </div>
         </div>
     )

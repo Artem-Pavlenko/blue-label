@@ -3,7 +3,7 @@ import sortIcon from '../../../assets/images/icons/sort.svg'
 import s from './AffiliatesHeader.module.scss'
 
 
-const AffiliatesHeader = () => {
+const AffiliatesHeader: React.FC = () => {
     return (
         <div className={s.header}>
             <div className={s.name}>

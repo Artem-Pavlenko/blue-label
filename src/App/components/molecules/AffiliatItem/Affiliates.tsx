@@ -1,8 +1,8 @@
 import React from 'react'
 import AffiliatesHeader from '../../atoms/AffiliatesHeader/AffiliatesHeader'
+import AffiliateItem from '../../atoms/AffiliateItem/AffiliateItem'
+import Paginator from '../Paginator/Paginator'
 import s from './AffiliateItem.module.scss'
-import AffiliateItem from "../../atoms/AffiliateItem/AffiliateItem";
-import Paginator from "../Paginator/Paginator";
 
 export type Affiliate = {
     name: string
@@ -13,7 +13,7 @@ export type Affiliate = {
     netDeposit: string
 }
 
-const Affiliates = () => {
+const Affiliates: React.FC = () => {
     const affiliates: Affiliate[] = [
         {
             name: 'Clickstadium - 1026',
@@ -56,7 +56,7 @@ const Affiliates = () => {
                 <AffiliatesHeader/>
                 {affiliates.map(a => <AffiliateItem item key={a.name}  {...a} />)}
             </div>
-            <Paginator />
+            <Paginator/>
         </div>
     )
 }
