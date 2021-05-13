@@ -1,16 +1,22 @@
 import React from 'react'
 import ManagerBlock from '../../molecules/ManagerBlock/ManagerBlock'
 import FilterLeadsBlock from '../../molecules/FilterLeadsBlock/FilterLeadsBlock'
-import s from './LeadsFilter.module.scss'
+import s from './Filet.module.scss'
 
 
-const LeadsFilter: React.FC = () => {
+export type FilterType = {
+    mainTitle: string
+    title: string
+    btnText: string
+}
+
+const Filet: React.FC<FilterType> = (props) => {
     return (
         <div className={s.leadsFilter}>
-            <ManagerBlock/>
+            <ManagerBlock {...props} />
             <FilterLeadsBlock/>
         </div>
     )
 }
 
-export default LeadsFilter
+export default Filet

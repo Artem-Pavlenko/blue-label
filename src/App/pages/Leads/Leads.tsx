@@ -1,5 +1,5 @@
 import React from 'react'
-import LeadsFilter from '../../components/organizms/LeadsFilter/LeadsFilter'
+import Filet from '../../components/organizms/Filet/Filet'
 import LeadsList from '../../components/organizms/LeadsList/LeadsList'
 import s from './Leads.module.scss'
 
@@ -7,7 +7,7 @@ import s from './Leads.module.scss'
 const Leads: React.FC = () => {
     return (
         <div className={s.leads}>
-            <LeadsFilter/>
+            <Filet mainTitle='MS AWAITING' title='Smart View' btnText='SAVE SMART VIEW'/>
             <LeadsList/>
         </div>
     )

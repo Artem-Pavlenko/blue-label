@@ -4,7 +4,7 @@ import s from './FilterLeadsBlock.module.scss'
 
 
 
-const FilterLeadsBlock = () => {
+const FilterLeadsBlock: React.FC = () => {
     const [value, setValue] = useState('')
 
     return (
