@@ -5,7 +5,7 @@ import s from './ManagerBlock.module.scss'
 
 
 
-const ManagerBlock: React.FC<FilterType> = ({mainTitle, title, btnText}) => {
+const ManagerBlock: React.FC<FilterType> = ({mainTitle, title = 'Working List', btnText}) => {
     return (
         <div className={s.managerBlock}>
             <div className={s.smartView}>

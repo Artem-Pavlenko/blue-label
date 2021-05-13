@@ -44,7 +44,7 @@
     }
     button {
       @include grayButton();
-      width: 205px;
+      min-width: 205px;
     }
   }
   .managerFields {

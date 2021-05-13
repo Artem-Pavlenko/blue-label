@@ -6,7 +6,7 @@ import s from './Filet.module.scss'
 
 export type FilterType = {
     mainTitle: string
-    title: string
+    title?: string
     btnText: string
 }
 
