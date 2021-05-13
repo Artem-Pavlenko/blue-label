@@ -1,0 +1,53 @@
+@import "src/App/common/style/mixins";
+
+
+.searchInput {
+  position: relative;
+
+  &:hover {
+    input {
+      cursor: pointer;
+      border-color: var(--primary-hovered-border);
+      transition: all .3s ease-in;
+
+      &::placeholder {
+        color: var(--white);
+        opacity: 7;
+        transition: all .3s ease-in;
+      }
+    }
+  }
+
+  input {
+    @include input();
+    transition: all .3s ease-out;
+    padding-right: 35px;
+    position: relative;
+    &::placeholder {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.75px;
+      transition: all .3s ease-out;
+    }
+    &:focus {
+      cursor: text;
+    }
+  }
+
+  .searchIcon {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background: url("../../../assets/images/icons/search.svg") center no-repeat;
+    transition: all .3s ease-out;
+
+    &:hover {
+      background: url("../../../assets/images/icons/search_hover.svg") center no-repeat;
+      transition: all .3s ease-in;
+    }
+  }
+}

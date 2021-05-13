@@ -1,0 +1,21 @@
+@import "src/App/common/style/variables";
+@import "src/App/common/style/mixins";
+
+.filterLeads {
+  @include flex(space-between,center);
+  height: 91px;
+  width: 100%;
+  padding: 0 27px 0 23px;
+
+  background: var(--primary-dark-gray);
+  input {
+    max-width: 245px;
+  }
+  button {
+    @include grayButton();
+    &:last-child {
+      @include button();
+      width: 203px;
+    }
+  }
+}

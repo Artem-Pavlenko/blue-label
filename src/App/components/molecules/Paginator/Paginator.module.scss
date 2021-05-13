@@ -18,6 +18,10 @@
     width: 25px;
     height: 25px;
     transition: all .3s ease-out;
+    &:hover ~ .count {
+      color: var(--white);
+      transition: all .3s ease-in;
+    }
   }
   .leftArrow {
     margin-right: 28px;
@@ -40,6 +44,7 @@
     text-align: right;
     letter-spacing: 0.3px;
     color: var(--dark-gray);
+    transition: all .3s ease-out;
   }
   .right {
     margin-left: 12px;

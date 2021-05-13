@@ -1,7 +1,7 @@
 import React from 'react'
+import DashboardCard from '../../components/atoms/DashboardCard/DashboardCard'
+import Affiliates from '../../components/molecules/AffiliatItem/Affiliates'
 import s from './Dashboard.module.scss'
-import DashboardCard from "../../components/atoms/DashboardCard/DashboardCard";
-import Affiliates from "../../components/molecules/AffiliatItem/Affiliates";
 
 
 const Dashboard = () => {
