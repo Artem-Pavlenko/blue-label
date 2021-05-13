@@ -1,0 +1,73 @@
+
+.checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 64px;
+  cursor: pointer;
+
+  &:hover {
+    label {
+      &:before {
+        background: var(--primary-gray);
+      }
+    }
+  }
+
+  .checkboxInput {
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+
+    &:checked {
+      + label {
+        &:before {
+          background: url("../../../assets/images/icons/check.svg") center no-repeat;
+        }
+
+        &:after {
+          background: linear-gradient(109.47deg, var(--primary-blue) 17.82%, var(--primary-purple) 106.28%);
+        }
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: var(--white);
+    &.item {
+      text-decoration: underline;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 24px;
+      z-index: 1;
+      width: 20px;
+      height: 20px;
+      background: var(--primary-gray);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all .3s ease-out;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 2px;
+      left: 26px;
+      z-index: 2;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all .3s ease-out;
+      background: var(--primary-dark-gray);
+    }
+  }
+}

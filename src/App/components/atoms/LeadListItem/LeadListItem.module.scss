@@ -1,0 +1,48 @@
+@import "src/App/common/style/mixins";
+
+.leadListItem {
+  @include flex(flex-start, center);
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid var(--primary-border);
+  > div {
+    @include flex(flex-start, center);
+    height: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: var(--dark-gray);
+  }
+
+  .lead {
+    border-right: 1px solid var(--primary-border);
+    width: $lead;
+  }
+  .id {
+    width: $id;
+  }
+  .created {
+    width: $created;
+  }
+  .status {
+    width: $status;
+  }
+  .country {
+    width: $country;
+  }
+  .email {
+    width: $email;
+  }
+  .localTime {
+    width: $localTime;
+  }
+  .owner {
+    width: $owner;
+  }
+  .manager {
+    width: $manager;
+  }
+  .desk {
+    width: $desk;
+  }
+}

@@ -44,8 +44,8 @@
   position: relative;
   z-index: 1;
   display: inline-block;
-  height: 44px;
-  padding: 0 10px;
+  min-height: 44px;
+  padding: 5px;
   margin: 0;
   border-radius: 15px;
   font-size: 16px;
