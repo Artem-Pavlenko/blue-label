@@ -1,12 +1,12 @@
 import React from 'react'
-import Filet from '../../components/organizms/Filet/Filet'
+import Filter from '../../components/organizms/Filter/Filter'
 import s from './Clients.module.scss'
 
 
 const Clients: React.FC = () => {
     return (
         <div className={s.clients}>
-            <Filet mainTitle='Clients' btnText='SAVE AS NEW SMART VIEW'/>
+            <Filter mainTitle='Clients' btnText='SAVE AS NEW SMART VIEW'/>
         </div>
     )
 }

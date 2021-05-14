@@ -1,5 +1,5 @@
 import React from 'react'
-import {FilterType} from '../../organizms/Filet/Filet'
+import {FilterType} from '../../organizms/Filter/Filter'
 import arrow from '../../../assets/images/icons/down_arrow.svg'
 import s from './ManagerBlock.module.scss'
 

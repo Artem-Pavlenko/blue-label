@@ -1,6 +1,4 @@
 import React, {ChangeEvent} from 'react'
-import searchImg from '../../../assets/images/icons/search.svg'
-
 import './SearchInput.scss'
 
 type SearchInputType = {
@@ -12,9 +10,7 @@ type SearchInputType = {
 
 
 const SearchInput: React.FC<SearchInputType> = ({value, onChange, onSearch, placeholder}) => {
-    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange(e.currentTarget.value)
-    }
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => onChange(e.currentTarget.value)
 
     return (
         <div className='searchInput'>
