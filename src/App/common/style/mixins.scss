@@ -100,3 +100,38 @@
     color: #9C9C9C;
   }
 }
+
+
+@mixin listHeader () {
+  @include flex(space-between, center);
+  height: 55px;
+  background: var(--primary-dark-gray);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: var(--white);
+  border-bottom: 1px solid var(--primary-border);
+}
+
+@mixin listItem () {
+  @include flex(space-between, center);
+  height: 55px;
+  border-bottom: 1px solid var(--primary-border);
+  > div {
+    @include flex(flex-start, center);
+    height: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: var(--dark-gray);
+  }
+}
+
+
+@mixin listPaginatorWrapper() {
+  @include flex(flex-start, center);
+  height: 64px;
+  width: 100%;
+  background: var(--primary-dark-gray);
+}

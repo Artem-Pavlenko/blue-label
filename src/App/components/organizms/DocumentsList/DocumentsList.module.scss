@@ -1,0 +1,13 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.documentsList {
+  margin-top: $listMarginTop;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background: rgba(44, 44, 46, 0.8);
+  backdrop-filter: blur(12px);
+
+  .paginatorWrapper {
+    @include listPaginatorWrapper();
+  }
+}

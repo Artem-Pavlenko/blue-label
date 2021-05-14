@@ -3,7 +3,6 @@
 
 
 .loginWrapper {
-  @include container();
   @include flexCenter();
 
   .login {
@@ -105,4 +104,3 @@
     }
   }
 }
-

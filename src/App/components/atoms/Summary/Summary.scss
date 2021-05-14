@@ -1,0 +1,45 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+@mixin footerTitle() {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: var(--secondary-gray);
+  margin-right: 5px;
+}
+
+@mixin footerCount() {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: 0.3px;
+  color: var(--white);
+}
+
+.summary {
+  @include flex(flex-start, center);
+
+  p {
+    margin: 0 30px 0 27px;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: var(--dark-gray);
+
+  }
+
+  .total {
+    margin-right: 34px;
+  }
+
+  .title {
+    @include footerTitle();
+  }
+
+  .count {
+    @include footerCount();
+  }
+}

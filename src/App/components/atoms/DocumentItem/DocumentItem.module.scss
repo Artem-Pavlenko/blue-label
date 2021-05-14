@@ -1,0 +1,40 @@
+@import "src/App/common/style/variables";
+@import "src/App/common/style/mixins";
+
+.docItem {
+  @include listItem();
+  width: 100%;
+
+  .downloadDoc {
+    @include flex(flex-start, center);
+    border-right: 1px solid var(--primary-border);
+    width: $action;
+
+  }
+  .docType {
+    width: $docType;
+  }
+  .id {
+    width: $ID;
+  }
+  .userType {
+    width: $userType;
+  }
+  .user {
+    text-decoration-line: underline;
+    color:var(--white);
+    width: $user;
+  }
+  .docName {
+    width: $docName;
+  }
+  .status {
+    width: $status;
+  }
+  .uploadedBy {
+    width: $uploadedBy;
+  }
+  .created {
+    width: $created;
+  }
+}

@@ -3,16 +3,8 @@
 
 
 .leadsListHeader {
-  @include flex(space-between, center);
+  @include listHeader();
   width: 3000px;
-  height: 55px;
-  background: var(--primary-dark-gray);
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.2px;
-  color: var(--white);
-  border-bottom: 1px solid var(--primary-border);
 
   .lead {
     width: $lead;

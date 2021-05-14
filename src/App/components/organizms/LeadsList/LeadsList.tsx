@@ -1,6 +1,7 @@
 import React from 'react'
 import LeadsListHeader from '../../atoms/LeadsListHeader/LeadsListHeader'
 import LeadListItem, {Lead} from '../../atoms/LeadListItem/LeadListItem'
+import Summary from '../../atoms/Summary/Summary'
 import Paginator from '../../molecules/Paginator/Paginator'
 import s from './LeadsList.module.scss'
 
@@ -107,7 +108,6 @@ const LeadsList: React.FC = () => {
             source: '77010',
             callCount: '4'
         },
-
     ]
 
     return (
@@ -117,17 +117,7 @@ const LeadsList: React.FC = () => {
                 {leadsItems.map(l => <LeadListItem key={l.id} {...l} />)}
             </div>
             <div className={s.paginatorWrapper}>
-                <div className={s.summary}>
-                    <p>Summary</p>
-                    <div className={s.total}>
-                        <span className={s.title}>Total</span>
-                        <span className={s.count}>0</span>
-                    </div>
-                    <div className={s.selected}>
-                        <span className={s.title}>Selected</span>
-                        <span className={s.count}>0</span>
-                    </div>
-                </div>
+                <Summary />
                 <Paginator/>
             </div>
         </div>

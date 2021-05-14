@@ -3,18 +3,8 @@
 
 
 .leadListItem {
-  @include flex(space-between, center);
+  @include listItem();
   width: 3000px;
-  height: 55px;
-  border-bottom: 1px solid var(--primary-border);
-  > div {
-    @include flex(flex-start, center);
-    height: 100%;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-    color: var(--dark-gray);
-  }
 
   .lead {
     border-right: 1px solid var(--primary-border);

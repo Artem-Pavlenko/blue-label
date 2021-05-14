@@ -2,9 +2,7 @@
 @import "src/App/common/style/variables";
 
 .dashboard {
-  @include container();
-  //@include flex(flex-start, flex-start);
-  //flex-direction: column;
+
   h3 {
     width: 100%;
     text-align: center;
