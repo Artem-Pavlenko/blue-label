@@ -13,11 +13,38 @@ export type Lead = {
     owner: string
     manager: string
     desk: string
+    affiliate: string
+    lastNoteOn: string
+    lastNote: string
+    lastActivity: string
+    complianceUpdated: string
+    creative: string
+    source: string | number
+    callCount: string | number
 }
 
 
 const LeadListItem: React.FC<Lead> = (props) => {
-    const {id, country, owner, manager, lead, localTime, desk, created, status, email} = props
+    const {
+        id,
+        country,
+        owner,
+        manager,
+        lead,
+        localTime,
+        desk,
+        created,
+        status,
+        email,
+        callCount,
+        affiliate,
+        creative,
+        lastNoteOn,
+        lastNote,
+        lastActivity,
+        complianceUpdated,
+        source
+    } = props
 
     return (
         <div className={s.leadListItem}>
@@ -31,9 +58,10 @@ const LeadListItem: React.FC<Lead> = (props) => {
                 {created}
             </div>
             <div className={s.status}>
-                {status}
+                <span>{status}</span>
             </div>
             <div className={s.country}>
+                <div className={s.flag}/>
                 {country}
             </div>
             <div className={s.email}>
@@ -50,6 +78,30 @@ const LeadListItem: React.FC<Lead> = (props) => {
             </div>
             <div className={s.desk}>
                 {desk}
+            </div>
+            <div className={s.affiliate}>
+                {affiliate}
+            </div>
+            <div className={s.lastNoteOn}>
+                {lastNoteOn}
+            </div>
+            <div className={s.lastNote}>
+                {lastNote}
+            </div>
+            <div className={s.lastActivity}>
+                {lastActivity}
+            </div>
+            <div className={s.complianceUpdated}>
+                {complianceUpdated}
+            </div>
+            <div className={s.creative}>
+                {creative}
+            </div>
+            <div className={s.source}>
+                {source}
+            </div>
+            <div className={s.callCount}>
+                {callCount}
             </div>
         </div>
     )

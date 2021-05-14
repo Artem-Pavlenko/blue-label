@@ -17,7 +17,15 @@ const LeadsList: React.FC = () => {
             localTime: '10:48',
             owner: 'Marco Sommer',
             manager: 'Noah Kaufmann',
-            desk: 'Germany'
+            desk: 'Germany',
+            affiliate: 'PlataMedia',
+            lastNoteOn: 'a year ago',
+            lastNote: 'the client had settlement...',
+            lastActivity: 'a year ago',
+            complianceUpdated: 'Never',
+            creative: 'No Creative',
+            source: '77010',
+            callCount: '4'
         },
         {
             lead: 'Uwe Seibold',
@@ -29,7 +37,15 @@ const LeadsList: React.FC = () => {
             localTime: '10:48',
             owner: 'Marco Sommer',
             manager: 'Noah Kaufmann',
-            desk: 'Germany'
+            desk: 'Germany',
+            affiliate: 'PlataMedia',
+            lastNoteOn: 'a year ago',
+            lastNote: 'na 3.1',
+            lastActivity: 'a year ago',
+            complianceUpdated: 'Never',
+            creative: 'No Creative',
+            source: '77010',
+            callCount: '4'
         },
         {
             lead: 'Uwe Seibold',
@@ -41,7 +57,15 @@ const LeadsList: React.FC = () => {
             localTime: '10:48',
             owner: 'Marco Sommer',
             manager: 'Noah Kaufmann',
-            desk: 'Germany'
+            desk: 'Germany',
+            affiliate: 'PlataMedia',
+            lastNoteOn: 'a year ago',
+            lastNote: 'has still no money YGB next...',
+            lastActivity: 'a year ago',
+            complianceUpdated: 'Never',
+            creative: 'No Creative',
+            source: '77010',
+            callCount: '4'
         },
         {
             lead: 'Uwe Seibold',
@@ -53,7 +77,15 @@ const LeadsList: React.FC = () => {
             localTime: '10:48',
             owner: 'Marco Sommer',
             manager: 'Noah Kaufmann',
-            desk: 'Germany'
+            desk: 'Germany',
+            affiliate: 'PlataMedia',
+            lastNoteOn: 'a year ago',
+            lastNote: 'has still no money YGB next...',
+            lastActivity: 'a year ago',
+            complianceUpdated: 'Never',
+            creative: 'No Creative',
+            source: '77010',
+            callCount: '4'
         },
         {
             lead: 'Uwe Seibold',
@@ -65,14 +97,23 @@ const LeadsList: React.FC = () => {
             localTime: '10:48',
             owner: 'Marco Sommer',
             manager: 'Noah Kaufmann',
-            desk: 'Germany'
+            desk: 'Germany',
+            affiliate: 'PlataMedia',
+            lastNoteOn: 'a year ago',
+            lastNote: 'client said that he is good...',
+            lastActivity: 'a year ago',
+            complianceUpdated: 'Never',
+            creative: 'No Creative',
+            source: '77010',
+            callCount: '4'
         },
+
     ]
 
     return (
         <div className={s.leadsList}>
-            <LeadsListHeader/>
             <div className={s.list}>
+                <LeadsListHeader/>
                 {leadsItems.map(l => <LeadListItem key={l.id} {...l} />)}
             </div>
             <div className={s.paginatorWrapper}>

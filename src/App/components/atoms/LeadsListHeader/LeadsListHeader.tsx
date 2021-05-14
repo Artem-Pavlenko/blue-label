@@ -36,6 +36,30 @@ const LeadsListHeader: React.FC = () => {
             <div className={s.desk}>
                 Desk
             </div>
+            <div className={s.affiliate}>
+                Affiliate
+            </div>
+            <div className={s.lastNoteOn}>
+                Last Note On
+            </div>
+            <div className={s.lastNote}>
+                Last Note
+            </div>
+            <div className={s.lastActivity}>
+                Last Activity
+            </div>
+            <div className={s.complianceUpdated}>
+                Compliance Updated
+            </div>
+            <div className={s.creative}>
+                Creative
+            </div>
+            <div className={s.source}>
+                Source
+            </div>
+            <div className={s.callCount}>
+                Call Count
+            </div>
         </div>
     )
 }

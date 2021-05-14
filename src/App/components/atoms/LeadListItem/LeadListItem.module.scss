@@ -1,8 +1,10 @@
 @import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
 
 .leadListItem {
-  @include flex(flex-start, center);
-  width: 100%;
+  @include flex(space-between, center);
+  width: 3000px;
   height: 55px;
   border-bottom: 1px solid var(--primary-border);
   > div {
@@ -19,6 +21,7 @@
     width: $lead;
   }
   .id {
+    padding-left: 5px;
     width: $id;
   }
   .created {
@@ -26,9 +29,45 @@
   }
   .status {
     width: $status;
+    span {
+      background: var(--secondary-dark-gray);
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      color: var(--primary-blue);
+      font-size: 14px;
+      line-height: 21px;
+      padding: 5px 10px;
+      text-transform: uppercase;
+    }
   }
   .country {
+    @include flex(flex-start, center);
     width: $country;
+    .flag {
+      position: relative;
+      margin-right: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: yellow;
+      overflow: hidden;
+      &:after {
+        position: absolute;
+        content: '';
+        top: 4px;
+        width: 100%;
+        height: 4px;
+        background: red;
+      }
+      &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        width: 100%;
+        height: 4px;
+        background: black;
+      }
+    }
   }
   .email {
     width: $email;
@@ -44,5 +83,29 @@
   }
   .desk {
     width: $desk;
+  }
+  .affiliate {
+    width: $affiliate;
+  }
+  .lastNoteOn {
+    width: $lastNoteOn;
+  }
+  .lastNote {
+    width: $lastNote;
+  }
+  .lastActivity {
+    width: $lastActivity;
+  }
+  .complianceUpdated {
+    width: $complianceUpdated;
+  }
+  .creative {
+    width: $creative;
+  }
+  .source {
+    width: $source;
+  }
+  .callCount {
+    width: $callCount;
   }
 }

@@ -3,8 +3,8 @@
 
 
 .leadsListHeader {
-  @include flex(flex-start, center);
-  width: 100%;
+  @include flex(space-between, center);
+  width: 3000px;
   height: 55px;
   background: var(--primary-dark-gray);
   font-weight: bold;
@@ -36,6 +36,7 @@
     width: $localTime;
   }
   .owner {
+    padding-left: 10px;
     width: $owner;
   }
   .manager {
@@ -43,5 +44,29 @@
   }
   .desk {
     width: $desk;
+  }
+  .affiliate {
+    width: $affiliate;
+  }
+  .lastNoteOn {
+    width: $lastNoteOn;
+  }
+  .lastNote {
+    width: $lastNote;
+  }
+  .lastActivity {
+    width: $lastActivity;
+  }
+  .complianceUpdated {
+    width: $complianceUpdated;
+  }
+  .creative {
+    width: $creative;
+  }
+  .source {
+    width: $source;
+  }
+  .callCount {
+    width: $callCount;
   }
 }
