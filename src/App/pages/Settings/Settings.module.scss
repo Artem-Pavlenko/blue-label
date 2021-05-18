@@ -3,4 +3,9 @@
 
 .settings {
   margin-top: 40px;
+
+  .main {
+    @include flex(flex-start, flex-start);
+    margin-bottom: 32px;
+  }
 }

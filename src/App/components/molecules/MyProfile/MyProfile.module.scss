@@ -1,0 +1,76 @@
+@import "src/App/common/style/mixins";
+
+$contentPaddingLeft: 42px;
+$inputWidth: 286px;
+$inputMarginRight: 30px;
+
+@mixin profileLabel() {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: var(--secondary-gray);
+}
+
+.myProfile {
+  box-shadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
+  background-color: var(--primary-dark-gray);
+  width: calc(100% - #{$settingNavBarWidth});
+
+  .header {
+    @include flex(space-between, flex-end);
+    padding: 9px 15px 10px 36px;
+    border-bottom: 1px solid var(--primary-border);
+
+    h2 {
+      font-size: 35px;
+      text-align: center;
+      margin: 0;
+      color: var(--white);
+    }
+
+    button {
+      @include button();
+      width: 131px;
+    }
+  }
+
+  .main {
+    padding-top: 17.5px;
+    padding-left: $contentPaddingLeft;
+
+    input {
+      @include input();
+      margin-top: 5px;
+    }
+
+    .name {
+      @include flex(flex-start, flex-start);
+      margin-bottom: 14.5px;
+    }
+
+    .phonePass {
+      @include flex(flex-start, flex-start);
+      margin-bottom: 17px;
+    }
+
+    .timezone {
+      width: calc(#{$inputWidth} * 2 + #{$inputMarginRight});
+      padding-bottom: 43px;
+      label {
+        @include profileLabel();
+      }
+    }
+
+    .firstName, .lastName, .phone, .pass {
+      width: $inputWidth;
+
+      label {
+        @include profileLabel();
+      }
+    }
+
+    .firstName, .phone {
+      margin-right: $inputMarginRight;
+    }
+  }
+}

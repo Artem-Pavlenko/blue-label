@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import {NavBarType} from '../../types/settingsTypes'
 import SettingNavBar from '../../components/molecules/SettingNavBar/SettingNavBar'
+import MyProfile from '../../components/molecules/MyProfile/MyProfile'
+import NotificationList from '../../components/molecules/NotificationList/NotificationList'
 import s from './Settings.module.scss'
 
 
@@ -11,11 +13,13 @@ const Settings = () => {
     return (
         <div className={s.settings}>
             <div className={s.main}>
-                <SettingNavBar onClick={setActive} active={active} />
+                <SettingNavBar onClick={setActive} active={active}/>
+                {active === 'My Profile' && <MyProfile/>}
             </div>
-            <div className={s.templates}>
-
-            </div>
+            {
+                active === 'My Profile' &&
+               <NotificationList />
+            }
         </div>
     )
 }

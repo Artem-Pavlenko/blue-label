@@ -14,9 +14,11 @@
 
 @mixin container() {
   padding-top: 112px;
+  padding-bottom: 45px;
   margin: 0 auto;
   width: 70%;
   min-height: calc(100vh - #{$headerHeight});
+
 }
 
 @mixin boxShadow() {

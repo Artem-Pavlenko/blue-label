@@ -1,0 +1,19 @@
+
+.notificationList {
+  width: 100%;
+  background: rgba(44, 44, 46, 0.8);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  //filter: blur(12px);
+
+  h2 {
+    padding-left: 35px;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 54px;
+    color: var(--white);
+    margin: 0;
+    height: 63px;
+    background: var(--primary-dark-gray);
+  }
+}

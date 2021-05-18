@@ -1,0 +1,14 @@
+@import "src/App/common/style/mixins";
+
+.notificationListItem {
+  @include flex(space-between, center);
+  height: 59px;
+  padding-left: 36px;
+  border-bottom: 1px solid var(--primary-border);
+  span {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: var(--white);
+  }
+}
