@@ -1,7 +1,7 @@
 import React from 'react'
 import './Summary.scss'
 
-type SummaryType = {
+export type SummaryType = {
     totalCount?: number
     selectedCount?: number
 }

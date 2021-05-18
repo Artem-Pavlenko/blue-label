@@ -4,6 +4,7 @@ import Dashboard from '../pages/Dashboard/Dashboard'
 import Leads from '../pages/Leads/Leads'
 import Clients from "../pages/Clients/Clients";
 import Documents from "../pages/Documents/Documents";
+import Transactions from "../pages/Transactions/Transactions";
 
 
 type Page = {
@@ -31,5 +32,9 @@ export const pages: Array<Page> = [
     {
         path: '/documents',
         Component: Documents
+    },
+    {
+        path: '/transactions',
+        Component: Transactions
     }
 ]

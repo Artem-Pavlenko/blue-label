@@ -1,9 +1,8 @@
 import React from 'react'
 import DocumentsListHeader from '../../atoms/DocumentsListHeader/DocumentsListHeader'
 import DocumentItem, {DocumentType} from '../../atoms/DocumentItem/DocumentItem'
+import ListFooter from '../../molecules/ListFooter/ListFooter'
 import s from './DocumentsList.module.scss'
-import Summary from "../../atoms/Summary/Summary";
-import Paginator from "../../molecules/Paginator/Paginator";
 
 
 const DocumentsList = () => {
@@ -93,13 +92,8 @@ const DocumentsList = () => {
     return (
         <div className={s.documentsList}>
             <DocumentsListHeader/>
-            {
-                documentItems.map(d => <DocumentItem key={d.ID} {...d}/>)
-            }
-            <div className={s.paginatorWrapper}>
-                <Summary totalCount={19}/>
-                <Paginator/>
-            </div>
+            {documentItems.map(d => <DocumentItem key={d.ID} {...d}/>)}
+            <ListFooter totalCount={28}/>
         </div>
     )
 }

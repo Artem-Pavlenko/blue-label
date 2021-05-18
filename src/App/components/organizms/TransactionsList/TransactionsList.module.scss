@@ -1,6 +1,7 @@
 @import "src/App/common/style/mixins";
 @import "src/App/common/style/variables";
 
-.documentsList {
+
+.transactionList {
   @include list();
 }

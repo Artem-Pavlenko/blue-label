@@ -1,8 +1,7 @@
 import React from 'react'
 import LeadsListHeader from '../../atoms/LeadsListHeader/LeadsListHeader'
 import LeadListItem, {Lead} from '../../atoms/LeadListItem/LeadListItem'
-import Summary from '../../atoms/Summary/Summary'
-import Paginator from '../../molecules/Paginator/Paginator'
+import ListFooter from '../../molecules/ListFooter/ListFooter'
 import s from './LeadsList.module.scss'
 
 
@@ -116,10 +115,7 @@ const LeadsList: React.FC = () => {
                 <LeadsListHeader/>
                 {leadsItems.map(l => <LeadListItem key={l.id} {...l} />)}
             </div>
-            <div className={s.paginatorWrapper}>
-                <Summary />
-                <Paginator/>
-            </div>
+            <ListFooter />
         </div>
     )
 }

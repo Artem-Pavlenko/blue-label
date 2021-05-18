@@ -3,10 +3,7 @@
 
 
 .leadsList {
-  margin-top: $listMarginTop;
-  width: 100%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  background: rgba(44, 44, 46, 0.8);
+  @include list();
 
   .list {
     padding-bottom: 20px;
@@ -16,9 +13,5 @@
     overflow-y: auto;
     //"scrollbar-color" for FireFox
     scrollbar-color: var(--primary-blue) var(--primary-dark-gray);
-  }
-
-  .paginatorWrapper {
-    @include listPaginatorWrapper();
   }
 }

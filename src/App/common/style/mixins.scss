@@ -104,7 +104,7 @@
 
 @mixin listHeader () {
   @include flex(space-between, center);
-  height: 55px;
+  height: 56px;
   background: var(--primary-dark-gray);
   font-weight: bold;
   font-size: 16px;
@@ -128,10 +128,16 @@
   }
 }
 
-
 @mixin listPaginatorWrapper() {
   @include flex(flex-start, center);
   height: 64px;
   width: 100%;
   background: var(--primary-dark-gray);
+}
+
+@mixin list () {
+  margin-top: $listMarginTop;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background: rgba(44, 44, 46, 0.8);
+  backdrop-filter: blur(12px);
 }

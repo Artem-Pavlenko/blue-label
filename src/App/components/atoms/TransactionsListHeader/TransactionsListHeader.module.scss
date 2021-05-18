@@ -1,0 +1,28 @@
+@import "src/App/common/style/variables";
+@import "src/App/common/style/mixins";
+
+.listHeader {
+  @include listHeader();
+
+  .actions {
+    width: $transactionsAction;
+  }
+  .type {
+    width: $transactionsType;
+  }
+  .id {
+    width: $transactionsID;
+  }
+  .user {
+    width: $transactionsUser;
+  }
+  .userAmount {
+    width: $userAmount;
+  }
+  .status {
+    width: $transactionsStatus;
+  }
+  .itemId {
+    width: $itemId;
+  }
+}
