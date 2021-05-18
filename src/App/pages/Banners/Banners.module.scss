@@ -4,6 +4,7 @@
 $btnWidth: 203px;
 
 .banners {
+  margin-top: 20px;
 
   .bannersFilter {
     @include flex(space-between, center);

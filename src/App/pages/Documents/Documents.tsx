@@ -6,8 +6,6 @@ import s from './Documents.module.scss'
 
 const Documents = () => {
 
-
-
     return (
         <div className={s.documents}>
             <Filter mainTitle='DOCUMENTS' btnText='SAVE AS NEW SMART VIEW'/>
