@@ -1,0 +1,148 @@
+@import "src/App/common/style/variables";
+@import "src/App/common/style/mixins";
+
+@mixin monthPeriodFilter() {
+  @include flex(flex-start, center);
+  padding: 3px 2px;
+  height: 100%;
+  background: var(--secondary-dark-gray);
+  border-radius: 15px;
+  div {
+    @include flexCenter();
+    padding: 0 3px;
+    cursor: pointer;
+    height: 40px;
+    min-width: 71px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #6F6F73;
+    transition: all .3s ease-out;
+
+    &:hover {
+      color: var(--white);
+      transition: all .3s ease-in;
+    }
+
+    &.checked {
+      cursor: default;
+      color: var(--white);
+      background: rgba(120, 120, 128, 0.36);
+      box-sizing: border-box;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(50, 50, 71, 0.006);
+      border-radius: 15px;
+      //border: 0.5px solid rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+
+.calendarFilter {
+  margin-top: 20px;
+  width: 100%;
+
+  .ownerManagerFilter {
+    @include flex(space-between, flex-end);
+    background: var(--primary-dark-gray);
+    padding: 0 30px 25px 30px;
+    box-shadow: $boxShadow;
+    height: 117px;
+    margin-bottom: 26px;
+
+    .filterBlock {
+      @include flex(flex-start, flex-end);
+
+      .owner, .manager {
+        position: relative;
+        cursor: pointer;
+
+        &:after {
+          position: absolute;
+          content: '';
+          top: 40px;
+          right: 16px;
+          width: 24px;
+          height: 24px;
+          background: url("../../../assets/images/icons/arrow_down_color.svg") center no-repeat;
+        }
+
+        span {
+          font-size: 16px;
+          line-height: 25px;
+          letter-spacing: 0.4px;
+          color: var(--secondary-gray);
+        }
+
+        div {
+          width: 280px;
+          height: 48px;
+          border: 1px solid var(--secondary-border);
+          border-radius: 4px;
+          font-size: 14px;
+          line-height: 21px;
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.75px;
+          color: var(--white);
+          padding-left: 16px;
+        }
+      }
+
+      .owner {
+        margin-right: 20px;
+      }
+    }
+
+    button {
+      @include button();
+      width: 203px;
+    }
+  }
+
+  .monthFilter {
+    @include flex(flex-start, center);
+    background: var(--primary-dark-gray);
+    padding: 7px;
+    box-shadow: $boxShadow;
+    height: 60px;
+    margin-bottom: 27px;
+
+    .daysWrapper, .monthWrapper, .periodsWrapper {
+      @include flex(flex-start, center);
+      width: 33.3%;
+    }
+
+    .daysWrapper {
+      .days {
+        @include monthPeriodFilter();
+      }
+    }
+
+    .monthWrapper {
+      justify-content: center;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 38px;
+      color: var(--white);
+
+      img {
+        width: 12px;
+
+        &:first-of-type {
+          margin-right: 21px;
+        }
+
+        &:last-of-type {
+          margin-left: 21px;
+        }
+      }
+    }
+
+    .periodsWrapper {
+      justify-content: flex-end;
+
+      .periods {
+        @include monthPeriodFilter();
+      }
+    }
+  }
+}

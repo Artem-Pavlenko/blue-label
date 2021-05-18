@@ -2,14 +2,15 @@ import {ComponentType} from 'react'
 import Login from '../pages/Login/Login'
 import Dashboard from '../pages/Dashboard/Dashboard'
 import Leads from '../pages/Leads/Leads'
-import Clients from "../pages/Clients/Clients";
-import Documents from "../pages/Documents/Documents";
-import Transactions from "../pages/Transactions/Transactions";
+import Clients from '../pages/Clients/Clients'
+import Documents from '../pages/Documents/Documents'
+import Transactions from '../pages/Transactions/Transactions'
+import Calendar from '../pages/Calendar/Calendar'
 
 
 type Page = {
     path: string
-    Component?: ComponentType
+    Component: ComponentType
 }
 
 export const pages: Array<Page> = [
@@ -36,5 +37,9 @@ export const pages: Array<Page> = [
     {
         path: '/transactions',
         Component: Transactions
+    },
+    {
+        path: '/calendar',
+        Component: Calendar
     }
 ]
