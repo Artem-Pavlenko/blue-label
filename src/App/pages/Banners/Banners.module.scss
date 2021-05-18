@@ -1,0 +1,39 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+$btnWidth: 203px;
+
+.banners {
+
+  .bannersFilter {
+    @include flex(space-between, center);
+    width: 100%;
+    padding: 8px 10px 8px 25px;
+    margin-bottom: 22px;
+    background: var(--primary-dark-gray);
+    height: 60px;
+    box-shadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
+    div {
+      width: calc(100% - #{$btnWidth});
+      @include flex(space-between, center);
+      span {
+        white-space: nowrap;
+        font-size: 20px;
+        line-height: 31px;
+        color: var(--white);
+      }
+      .imgWrapper {
+        @include flexCenter();
+        margin-right: 15px;
+        width: 68px;
+        height: 45px;
+        background: #3A3A3C;
+        border-radius: 15px;
+      }
+    }
+    button {
+      @include button();
+      width: $btnWidth;
+    }
+  }
+}
