@@ -1,0 +1,25 @@
+@import "src/App/common/style/mixins";
+
+.item {
+  @include flex(flex-start, center);
+  padding-left: 20px;
+  cursor: pointer;
+  height: 44px;
+  width: 100%;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--secondary-gray);
+  transition: all .3s ease-out;
+  &.active {
+    background: var(--primary-blue);
+    border-radius: 15px;
+    color: var(--white);
+    transition: all .3s ease-in;
+  }
+  &:hover {
+    color: var(--white);
+    transition: all .3s ease-in;
+  }
+}

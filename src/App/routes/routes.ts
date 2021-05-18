@@ -7,6 +7,7 @@ import Documents from '../pages/Documents/Documents'
 import Transactions from '../pages/Transactions/Transactions'
 import Calendar from '../pages/Calendar/Calendar'
 import Banners from '../pages/Banners/Banners'
+import Settings from "../pages/Settings/Settings";
 
 
 type Page = {
@@ -46,5 +47,9 @@ export const pages: Array<Page> = [
     {
         path: '/banners',
         Component: Banners
+    },
+    {
+        path: '/settings',
+        Component: Settings
     }
 ]
