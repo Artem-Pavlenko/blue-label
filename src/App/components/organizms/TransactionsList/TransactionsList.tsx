@@ -94,8 +94,10 @@ const TransactionsList = () => {
 
     return (
         <div className={s.transactionList}>
-            <TransactionsListHeader/>
-            {transactions.map(t => <TransactionItem key={t.transactionId} {...t}/>)}
+            <div className={s.list}>
+                <TransactionsListHeader/>
+                {transactions.map(t => <TransactionItem key={t.transactionId} {...t}/>)}
+            </div>
             <ListFooter totalCount={28}/>
         </div>
     )

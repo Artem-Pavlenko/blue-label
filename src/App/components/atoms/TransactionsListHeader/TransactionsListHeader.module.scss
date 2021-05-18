@@ -3,6 +3,7 @@
 
 .listHeader {
   @include listHeader();
+  //width: 3000px;
 
   .actions {
     width: $transactionsAction;

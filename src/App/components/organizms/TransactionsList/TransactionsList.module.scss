@@ -4,4 +4,12 @@
 
 .transactionList {
   @include list();
+
+  .list {
+    padding-bottom: 20px;
+    margin-bottom: 19px;
+    overflow-y: auto;
+    //"scrollbar-color" for FireFox
+    scrollbar-color: var(--primary-blue) var(--primary-dark-gray);
+  }
 }
