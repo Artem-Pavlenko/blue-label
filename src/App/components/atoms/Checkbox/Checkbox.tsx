@@ -12,7 +12,7 @@ const Checkbox: React.FC<CheckboxType> = ({text, id, item}) => {
     return (
         <div className='checkbox'>
             <input className='checkboxInput' id={id} type='checkbox'/>
-            <label className={item ? 'item' : ''} htmlFor={id}>{text}</label>
+            <label className={item ? 'label item' : 'label'} htmlFor={id}>{text}</label>
         </div>
     )
 }

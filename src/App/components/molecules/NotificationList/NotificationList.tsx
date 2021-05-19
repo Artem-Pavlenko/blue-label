@@ -1,19 +1,19 @@
 import React from 'react'
+import NotificationListItem from '../../atoms/NotificationListItem/NotificationListItem'
 import s from './NotificationList.module.scss'
-import NotificationListItem from "../../atoms/NotificationListItem/NotificationListItem";
 
 
 const NotificationList = () => {
     const notifications = [
-        {text: 'User Login'}, {text: 'User Online'}, {text: 'New deposit'},
-        {text: 'New withdraw'}, {text: 'User in deposit page'},
+        {name: 'User Login'}, {name: 'User Online'}, {name: 'New deposit'},
+        {name: 'New withdraw'}, {name: 'User in deposit page'},
     ]
 
     return (
         <div className={s.notificationList}>
             <h2>Notifications</h2>
             {
-                notifications.map(n => <NotificationListItem key={n.text} text={n.text}/>)
+                notifications.map(n => <NotificationListItem key={n.name} name={n.name}/>)
             }
         </div>
     )

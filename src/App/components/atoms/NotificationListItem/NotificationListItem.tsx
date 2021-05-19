@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
+import CheckboxSquare from '../CheckboxSquare/CheckboxSquare'
 import s from './NotificationListItem.module.scss'
 
 
-const NotificationListItem: React.FC<{ text: string }> = ({text}) => {
+const NotificationListItem: React.FC<{ name: string }> = ({name}) => {
+    const [checked, setChecked] = useState<boolean>(true)
+
     return (
         <div className={s.notificationListItem}>
-            <span>{text}</span>
+            <span className={s.name}>{name}</span>
+            <CheckboxSquare onChange={setChecked} checked={checked} id={name} text={'Check All'} />
         </div>
     )
 }
