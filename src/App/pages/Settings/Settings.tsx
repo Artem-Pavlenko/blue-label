@@ -4,7 +4,7 @@ import SettingNavBar from '../../components/molecules/SettingNavBar/SettingNavBa
 import MyProfile from '../../components/molecules/MyProfile/MyProfile'
 import NotificationList from '../../components/molecules/NotificationList/NotificationList'
 import s from './Settings.module.scss'
-import ManagerAccTypes from "../../components/organizms/ManagerAccTypes/ManagerAccTypes";
+import ManagerSettings from "../../components/organizms/ManagerAccTypes/ManagerSettings";
 
 
 const Settings = () => {
@@ -16,7 +16,9 @@ const Settings = () => {
             case "My Profile":
                 return <MyProfile/>
             case "Manage Account Types":
-                return <ManagerAccTypes/>
+                return <ManagerSettings settingType='account types' headerText='Manage Account Types'/>
+            case "Manage Affiliates":
+                return <ManagerSettings settingType='affiliates' headerText='Manage Affiliates'/>
             default :
                 return <MyProfile/>
         }

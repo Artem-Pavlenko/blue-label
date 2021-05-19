@@ -1,13 +1,17 @@
 import React from 'react'
 import s from './ManagerAccTypesHeader.module.scss'
 
+type Header = {
+    text: string
+    type: 'account types' | 'affiliates'
+}
 
-const ManagerAccTypesHeader = () => {
+const ManagerAccTypesHeader: React.FC<Header> = ({type, text}) => {
     return (
         <div className={s.managerHeader}>
-            <span>Manage Account Types</span>
+            <span>{text}</span>
             <div className={s.btnBlock}>
-                <button>CLEAR ALL FILTERS (0)</button>
+                {type === 'account types' && <button>CLEAR ALL FILTERS (0)</button>}
                 <button>+ ADD REMINDER</button>
             </div>
         </div>
