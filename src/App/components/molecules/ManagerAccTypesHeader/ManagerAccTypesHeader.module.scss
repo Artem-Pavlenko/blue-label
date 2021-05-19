@@ -1,0 +1,30 @@
+@import "src/App/common/style/variables";
+@import "src/App/common/style/mixins";
+
+
+.managerHeader {
+  @include flex(space-between, center);
+  width: 100%;
+  height: 60px;
+  background: var(--primary-dark-gray);
+  box-shadow: $secBoxShadow;
+  padding-left: 20px;
+  margin-bottom: 28px;
+  span {
+    font-size: 20px;
+    line-height: 31px;
+    color: var(--white);
+  }
+  .btnBlock {
+    @include flex(flex-start, center);
+    button {
+      &:first-of-type {
+        @include grayButton();
+        margin-right: 25px;
+      }
+      &:last-of-type {
+        @include button();
+      }
+    }
+  }
+}

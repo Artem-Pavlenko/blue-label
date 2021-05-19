@@ -13,7 +13,7 @@ $btnWidth: 203px;
     margin-bottom: 22px;
     background: var(--primary-dark-gray);
     height: 60px;
-    box-shadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
+    box-shadow: $secBoxShadow;
     div {
       width: calc(100% - #{$btnWidth});
       @include flex(space-between, center);

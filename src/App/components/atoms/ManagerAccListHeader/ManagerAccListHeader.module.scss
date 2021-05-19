@@ -1,0 +1,28 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.managerAccListHeader {
+  @include listHeader();
+
+  .name {
+    width: $typeName;
+  }
+  .id {
+    width: $typeId;
+  }
+  .amount {
+    width: $typeAmount;
+  }
+  .networkFree {
+    width: $typeNetworkFree;
+  }
+  .withdrawFree {
+    width: $typeWithdrawFree;
+  }
+  .created {
+    width: $typeCreated;
+  }
+  .actions {
+    width: $typeActions;
+  }
+}

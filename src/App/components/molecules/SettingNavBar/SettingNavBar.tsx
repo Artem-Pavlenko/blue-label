@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavBarType} from '../../../types/settingsTypes'
-import SettingNavBarItem from "../../atoms/SettingNavBarItem/SettingNavBarItem";
+import SettingNavBarItem from '../../atoms/SettingNavBarItem/SettingNavBarItem'
 import s from './SettingNavBar.module.scss'
 
 type NavBarItem = {

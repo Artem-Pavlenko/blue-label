@@ -12,9 +12,9 @@ $inputMarginRight: 30px;
 }
 
 .myProfile {
-  box-shadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
+  box-shadow: $secBoxShadow;
   background-color: var(--primary-dark-gray);
-  width: calc(100% - #{$settingNavBarWidth});
+  width: $settingMainBlockWidth;
 
   .header {
     @include flex(space-between, flex-end);
@@ -54,7 +54,7 @@ $inputMarginRight: 30px;
     }
 
     .timezone {
-      width: calc(#{$inputWidth} * 2 + #{$inputMarginRight});
+      max-width: calc(#{$inputWidth} * 2 + #{$inputMarginRight});
       padding-bottom: 43px;
       label {
         @include profileLabel();

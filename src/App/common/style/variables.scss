@@ -2,7 +2,10 @@ $headerHeight: 80px;
 
 $firstBoxShadowColor: rgba(50, 50, 71, 0.08);
 $secBoxShadowColor: rgba(50, 50, 71, 0.06);
+
+//BoxShadow
 $boxShadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
+$secBoxShadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
 
 //Lists margin-top
 $listMarginTop: 27px;
@@ -68,3 +71,13 @@ $bannerTotalPeriod: 115px;
 
 //Setting page
 $settingNavBarWidth: 297px;
+$settingMainBlockWidth:  calc(100% - #{$settingNavBarWidth});
+
+// ManagerAccount type list row width
+$typeName: 150px;
+$typeId: 110px;
+$typeAmount: 125px;
+$typeNetworkFree: 110px;
+$typeWithdrawFree: 125px;
+$typeCreated: 106px;
+$typeActions: 90px

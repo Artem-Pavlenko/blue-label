@@ -1,0 +1,53 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.managerAccType {
+  @include listItem();
+
+  .name {
+    width: $typeName;
+    border-right: 1px solid var(--primary-border);
+  }
+  .id {
+    width: $typeId;
+  }
+  .amount {
+    width: $typeAmount;
+  }
+  .networkFree {
+    width: $typeNetworkFree;
+  }
+  .withdrawFree {
+    width: $typeWithdrawFree;
+  }
+  .created {
+    width: $typeCreated;
+  }
+  .actions {
+    @include flex(space-around, center);
+    width: $typeActions;
+    height: 28px;
+    margin-right: 10px;
+
+    .edit, .delete {
+      height: 100%;
+      width: 33px;
+      cursor: pointer;
+      border: 1px solid var(--dark-gray);
+      border-radius: 8px;
+      &:hover {
+        border-color: var(--gray);
+        box-shadow: 0 0 10px var(--gray), inset 0 0 10px var(--gray);
+        transition: all .2s ease-in;
+      }
+    }
+
+    .edit {
+      background: url("../../../assets/images/icons/edit_pencil.svg") center no-repeat;
+    }
+
+    .delete {
+      background: url("../../../assets/images/icons/delete_item.svg") center no-repeat;
+    }
+  }
+}

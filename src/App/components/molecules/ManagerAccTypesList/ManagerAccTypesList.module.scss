@@ -1,0 +1,5 @@
+@import "src/App/common/style/mixins";
+
+.managerAccTypesList {
+  @include list();
+}

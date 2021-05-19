@@ -9,5 +9,5 @@
   width: $settingNavBarWidth;
   height: 250px;
   background: var(--primary-dark-gray);
-  box-shadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
+  box-shadow: $secBoxShadow;
 }
