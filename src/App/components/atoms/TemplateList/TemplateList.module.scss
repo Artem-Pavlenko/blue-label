@@ -1,0 +1,30 @@
+@import "src/App/common/style/variables";
+@import "src/App/common/style/mixins";
+
+.templateList {
+  width: 100%;
+  max-height: 297px;
+  margin: 0 0 21px;
+  padding: 0;
+  background: var(--secondary-dark-gray);
+  overflow-y: auto;
+
+  &.dark {
+    background: var(--primary-dark-gray);
+    li {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      color: #626267;
+    }
+  }
+
+  li {
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--secondary-gray);
+    margin: 0;
+    padding: 6px 0 6px 13px;
+    list-style: none;
+  }
+}

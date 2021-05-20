@@ -6,6 +6,7 @@ import MyProfile from '../../components/molecules/MyProfile/MyProfile'
 import NotificationList from '../../components/molecules/NotificationList/NotificationList'
 import ManagerSettings from '../../components/organizms/ManagerAccTypes/ManagerSettings'
 import s from './Settings.module.scss'
+import TemplateEditor from "../../components/organizms/TemplateEditor/TemplateEditor";
 
 
 const Settings = () => {
@@ -173,6 +174,7 @@ const Settings = () => {
                 {renderPage()}
             </div>
             {renderSecondBlock()}
+            {active === 'Templates Editor' && <TemplateEditor/>}
         </div>
     )
 }

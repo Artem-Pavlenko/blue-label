@@ -1,0 +1,12 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.templateEditor {
+  width: $settingNavBarWidth;
+
+  .addTemplate {
+    @include button();
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
