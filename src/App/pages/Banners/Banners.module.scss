@@ -13,7 +13,7 @@ $btnWidth: 203px;
     margin-bottom: 22px;
     background: var(--primary-dark-gray);
     height: 60px;
-    box-shadow: $secBoxShadow;
+    box-shadow: $boxShadow;
     div {
       width: calc(100% - #{$btnWidth});
       @include flex(space-between, center);
@@ -28,7 +28,7 @@ $btnWidth: 203px;
         margin-right: 15px;
         width: 68px;
         height: 45px;
-        background: var(--secondary-gray);
+        background: var(--secondary-dark-gray);
         border-radius: 15px;
       }
     }

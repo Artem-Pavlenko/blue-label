@@ -1,0 +1,32 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+
+.templateWrapper {
+  @include flex(flex-start, flex-start);
+  .templates {
+    width: $settingNavBarWidth;
+    margin-right: $settingNavBarMarginRight;
+
+    .addTemplate {
+      @include button();
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  .templateEditorBlock {
+    width: $settingMainBlockWidth;
+    height: 358px;
+    box-shadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
+    background: var(--primary-dark-gray);
+    padding: 25px 33px 33px 27px;
+    h5 {
+      margin: 0;
+      font-weight: normal;
+      line-height: 25px;
+      letter-spacing: 0.4px;
+      color: var(--secondary-gray);
+    }
+  }
+}
+

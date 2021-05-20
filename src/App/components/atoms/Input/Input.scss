@@ -1,0 +1,16 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.inputWrapper {
+  width: 100%;
+  label {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.4px;
+    color: var(--secondary-gray);
+  }
+  .input {
+    @include input();
+    margin-top: 5px;
+  }
+}

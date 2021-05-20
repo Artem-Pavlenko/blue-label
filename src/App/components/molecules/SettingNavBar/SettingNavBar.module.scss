@@ -5,9 +5,9 @@
   @include flex(flex-start, flex-start);
   flex-direction: column;
   padding: 12px 10px;
-  margin-right: 30px;
+  margin-right: $settingNavBarMarginRight;
   width: $settingNavBarWidth;
-  height: 250px;
+  height: $settingNavBarHeight;
   background: var(--primary-dark-gray);
-  box-shadow: $secBoxShadow;
+  box-shadow: $boxShadow;
 }

@@ -12,9 +12,9 @@ $inputMarginRight: 30px;
 }
 
 .myProfile {
-  box-shadow: $secBoxShadow;
+  box-shadow: $boxShadow;
   background-color: var(--primary-dark-gray);
-  width: $settingMainBlockWidth;
+  width: 100%;
 
   .header {
     @include flex(space-between, flex-end);

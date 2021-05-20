@@ -7,5 +7,9 @@
   .main {
     @include flex(flex-start, flex-start);
     margin-bottom: 32px;
+
+    .wrapper {
+      width: $settingMainBlockWidth;
+    }
   }
 }

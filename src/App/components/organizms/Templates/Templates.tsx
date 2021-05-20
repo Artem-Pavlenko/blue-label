@@ -1,10 +1,16 @@
 import React from 'react'
+import {Editor} from '@tinymce/tinymce-react'
 import Title from '../../atoms/Title/Title'
 import TemplateList from '../../atoms/TemplateList/TemplateList'
-import s from './TemplateEditor.module.scss'
+import s from './Templates.module.scss'
 
 
-const TemplateEditor = () => {
+type TemplateEditorType = {
+    newTemplate: () => void
+    templateEditor: boolean
+}
+
+const Templates: React.FC<TemplateEditorType> = ({newTemplate, templateEditor}) => {
     const templates = [
         {template: 'Account Activation', id: '1'},
         {template: 'Account Reset Password', id: '2'},
@@ -28,15 +34,29 @@ const TemplateEditor = () => {
         {template: '{email} - user email', id: '3'},
     ]
 
+
     return (
-        <div className={s.templateEditor}>
-            <Title text='Variables'/>
-            <TemplateList templateList={templates} />
-            <button className={s.addTemplate}>+ ADD NEW TEMPLATE</button>
-            <Title text='Variables'/>
-            <TemplateList templateList={templates2} />
+        <div className={s.templateWrapper}>
+            <div className={s.templates}>
+                <Title text='Variables'/>
+                <TemplateList templateList={templates}/>
+                <button onClick={newTemplate} className={s.addTemplate}>+ ADD NEW TEMPLATE</button>
+                <Title text='Variables'/>
+                <TemplateList templateList={templates2} dark/>
+            </div>
+            {
+                templateEditor &&
+                <div className={s.templateEditorBlock}>
+                    <h5>Content</h5>
+                    <Editor
+                        init={{
+                            min_height: 300,
+                        }}
+                    />
+                </div>
+            }
         </div>
     )
 }
 
-export default TemplateEditor
+export default Templates

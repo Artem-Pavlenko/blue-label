@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import {NavBarType} from '../../types/settingsTypes'
 import {ManagerAccItemType} from '../../components/atoms/ManagerAccType/ManagerAccType'
-import SettingNavBar from '../../components/molecules/SettingNavBar/SettingNavBar'
-import MyProfile from '../../components/molecules/MyProfile/MyProfile'
 import NotificationList from '../../components/molecules/NotificationList/NotificationList'
 import ManagerSettings from '../../components/organizms/ManagerAccTypes/ManagerSettings'
+import SettingNavBar from '../../components/molecules/SettingNavBar/SettingNavBar'
+import NewTemplate from '../../components/organizms/NewTemplate/NewTemplate'
+import Templates from '../../components/organizms/Templates/Templates'
+import MyProfile from '../../components/molecules/MyProfile/MyProfile'
 import s from './Settings.module.scss'
-import TemplateEditor from "../../components/organizms/TemplateEditor/TemplateEditor";
 
 
 const Settings = () => {
@@ -143,10 +144,20 @@ const Settings = () => {
         },
     ]
 
-    const [active, setActive] = useState<NavBarType>('My Profile')
+    const [settingCategory, setSettingCategory] = useState<NavBarType>('My Profile')
+    const [newTemplate, setNewTemplate] = useState<boolean>(false)
+
+    const onCheckSettingCategory = (category: NavBarType) => {
+        setSettingCategory(category)
+        if (category !== 'Templates Editor') {
+            setNewTemplate(false)
+        }
+    }
+
+    const newTemplateHandler = () => setNewTemplate(true)
 
     const renderPage = () => {
-        switch (active) {
+        switch (settingCategory) {
             case "My Profile":
                 return <MyProfile/>
             case "Manage Account Types":
@@ -158,23 +169,23 @@ const Settings = () => {
         }
     }
 
-    const renderSecondBlock = () => {
-        switch (active) {
-            case "My Profile":
-                return <NotificationList/>
-            default:
-                return null
-        }
-    }
-
     return (
         <div className={s.settings}>
             <div className={s.main}>
-                <SettingNavBar onClick={setActive} active={active}/>
-                {renderPage()}
+                <SettingNavBar onCheckCategory={onCheckSettingCategory} active={settingCategory}/>
+                <div className={s.wrapper}>
+                    {newTemplate && <NewTemplate/>}
+                    {renderPage()}
+                </div>
             </div>
-            {renderSecondBlock()}
-            {active === 'Templates Editor' && <TemplateEditor/>}
+            {
+                settingCategory === 'My Profile' &&
+                <NotificationList/>
+            }
+            {
+                settingCategory === 'Templates Editor' &&
+                <Templates newTemplate={newTemplateHandler} templateEditor={newTemplate}/>
+            }
         </div>
     )
 }

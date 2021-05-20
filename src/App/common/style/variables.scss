@@ -5,7 +5,6 @@ $secBoxShadowColor: rgba(50, 50, 71, 0.06);
 
 //BoxShadow
 $boxShadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
-$secBoxShadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
 
 //Lists margin-top
 $listMarginTop: 27px;
@@ -71,7 +70,9 @@ $bannerTotalPeriod: 115px;
 
 //Setting page
 $settingNavBarWidth: 297px;
-$settingMainBlockWidth:  calc(100% - #{$settingNavBarWidth});
+$settingNavBarHeight: 250px;
+$settingNavBarMarginRight: 30px;
+$settingMainBlockWidth: calc(100% - #{$settingNavBarWidth} - #{$settingNavBarMarginRight});
 
 // ManagerAccount type list row width
 $typeName: 150px;

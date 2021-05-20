@@ -1,0 +1,27 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+$short: 210px;
+
+.newTemplate {
+  @include flex(space-between, flex-start);
+  flex-wrap: wrap;
+  height: $settingNavBarHeight;
+  width: 100%;
+  background: var(--primary-dark-gray);
+  box-shadow: $boxShadow;
+  padding: 31px 38px 53px 42px;
+  overflow-y: auto;
+
+  .long {
+    width: 334px;
+  }
+  .short {
+    width: $short;
+  }
+  button {
+    @include button();
+    width: $short;
+    margin-top: 30px;
+  }
+}

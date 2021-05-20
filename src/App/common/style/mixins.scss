@@ -37,6 +37,11 @@
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.75px;
+  transition: all .3s ease-out;
+  &:hover {
+    border: 1px solid var(--primary-hovered-border);
+    transition: all .3s ease-in;
+  }
 }
 
 @mixin button() {
