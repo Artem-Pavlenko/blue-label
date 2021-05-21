@@ -99,8 +99,10 @@ const BannersList = () => {
 
     return (
         <div className={s.bannersList}>
-            <BannerListHeader/>
-            {banners.map(b => <BannerItem key={b.ID} {...b} />)}
+            <div className={s.list}>
+                <BannerListHeader/>
+                {banners.map(b => <BannerItem key={b.ID} {...b} />)}
+            </div>
             <ListFooter totalCount={196}/>
         </div>
     )

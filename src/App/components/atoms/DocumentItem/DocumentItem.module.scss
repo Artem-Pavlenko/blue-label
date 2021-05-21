@@ -3,7 +3,7 @@
 
 .docItem {
   @include listItem();
-  width: 100%;
+  min-width: 1500px;
 
   .downloadDoc {
     @include flex(flex-start, center);

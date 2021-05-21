@@ -4,19 +4,19 @@
 
 .leadsListHeader {
   @include listHeader();
-  width: 3000px;
+  min-width: 3000px;
 
   .lead {
     width: $lead;
   }
   .id {
-    width: $id;
+    width: $leadId;
   }
   .created {
     width: $created;
   }
   .status {
-    width: $status;
+    width: $leadsStatus;
   }
   .country {
     width: $country;

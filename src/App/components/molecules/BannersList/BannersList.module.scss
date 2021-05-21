@@ -3,4 +3,7 @@
 
 .bannersList {
   @include list();
+  .list {
+    @include listScroll();
+  }
 }

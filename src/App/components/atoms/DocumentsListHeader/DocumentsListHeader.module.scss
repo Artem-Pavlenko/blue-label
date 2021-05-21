@@ -2,8 +2,9 @@
 @import "src/App/common/style/mixins";
 
 .docListHeader {
-  width: 100%;
   @include listHeader();
+  min-width: 1500px;
+
   .action {
     width: $action;
   }

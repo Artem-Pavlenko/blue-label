@@ -3,6 +3,7 @@
 
 .bannerItem {
   @include listItem();
+  width: 1500px;
   .id {
     width: $bannerID;
     border-right: 1px solid var(--primary-border);

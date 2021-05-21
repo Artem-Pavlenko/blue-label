@@ -3,4 +3,8 @@
 
 .documentsList {
   @include list();
+
+  .list {
+    @include listScroll();
+  }
 }

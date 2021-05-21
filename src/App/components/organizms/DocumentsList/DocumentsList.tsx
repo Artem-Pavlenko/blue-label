@@ -91,8 +91,10 @@ const DocumentsList = () => {
 
     return (
         <div className={s.documentsList}>
-            <DocumentsListHeader/>
-            {documentItems.map(d => <DocumentItem key={d.ID} {...d}/>)}
+            <div className={s.list}>
+                <DocumentsListHeader/>
+                {documentItems.map(d => <DocumentItem key={d.ID} {...d}/>)}
+            </div>
             <ListFooter totalCount={28}/>
         </div>
     )

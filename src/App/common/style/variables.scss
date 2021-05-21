@@ -19,7 +19,7 @@ $netDepositWidth: 20%;
 
 // Leads row width
 $lead: 207px;
-$id: 150px;
+$leadId: 150px;
 $created: 100px;
 $leadsStatus: 140px;
 $country: 150px;
@@ -36,6 +36,8 @@ $complianceUpdated: 161px;
 $creative: 100px;
 $source: 75px;
 $callCount: 100px;
+
+$leadRowWidth: calc(#{$lead} + #{$leadId} + #{$created} + #{$leadsStatus} + #{$country} + #{$email} + #{$localTime} + #{$owner} + #{$manager} + #{$desk} + #{$affiliate} + #{$lastNoteOn} + #{$lastNote} + #{$lastActivity} + #{$complianceUpdated} + #{$creative} + #{$source} + #{$callCount} + 100px);
 
 // Document row width
 $action: 137px;

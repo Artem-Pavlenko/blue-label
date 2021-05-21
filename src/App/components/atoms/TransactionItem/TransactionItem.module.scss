@@ -3,7 +3,7 @@
 
 .transaction {
   @include listItem();
-  //width: 3000px;
+  width: 1500px;
 
   .actions {
     width: $transactionsAction;

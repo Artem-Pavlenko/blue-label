@@ -3,6 +3,7 @@
 
 .bannerHeader {
   @include listHeader();
+  width: 1500px;
 
   .id {
     width: $bannerID;
