@@ -63,6 +63,11 @@ a, a:active {
   text-decoration: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 h1 {
   font-size: 65px;
@@ -95,6 +100,7 @@ h6 {
   --primary-gray: #6F6F74;
   --secondary-gray: #65656A;
   --gray: #959596;
+  --ligth-gray: #aca9a9;
   --dark-gray: #77777D;
   --primary-blue: #5E5CE6;
   --primary-purple: #E35CE6;

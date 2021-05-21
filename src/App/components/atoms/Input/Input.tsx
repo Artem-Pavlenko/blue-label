@@ -10,8 +10,8 @@ type InputType = {
 const Input: React.FC<InputType> = ({type = 'text', label, className}) => {
     return (
         <div className={`inputWrapper ${className}`}>
-            <label htmlFor="input">{label}</label>
-            <input className='input' id='input' type={type}/>
+            <label htmlFor={label}>{label}</label>
+            <input className='input' id={label} type={type}/>
         </div>
     )
 }

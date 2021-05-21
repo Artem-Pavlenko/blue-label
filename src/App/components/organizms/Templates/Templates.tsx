@@ -48,11 +48,7 @@ const Templates: React.FC<TemplateEditorType> = ({newTemplate, templateEditor}) 
                 templateEditor &&
                 <div className={s.templateEditorBlock}>
                     <h5>Content</h5>
-                    <Editor
-                        init={{
-                            min_height: 300,
-                        }}
-                    />
+                    <Editor init={{min_height: 300,}}/>
                 </div>
             }
         </div>
