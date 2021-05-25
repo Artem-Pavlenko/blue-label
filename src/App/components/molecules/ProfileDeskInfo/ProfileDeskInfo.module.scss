@@ -1,0 +1,82 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+
+.profileDesk {
+  width: 100%;
+  padding: 15px 15px 20px 22px;
+  background: var(--primary-dark-gray);
+  border-bottom: 1px solid var(--secondary-border);
+
+  .managerBlock {
+
+    .owner, .manager, .desk {
+      @include flex(flex-start, center);
+      margin-bottom: 8px;
+
+      &:last-of-type {
+        margin-bottom: 25px;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 31px;
+        color: var(--secondary-gray);
+      }
+    }
+
+    .owner {
+      .imgWrapper {
+        .ownerImg {
+          @include img(15px, 15px);
+          background: url("../../../assets/images/icons/owner.svg");
+        }
+
+        &:hover {
+          .ownerImg {
+            background: url("../../../assets/images/icons/owner_hover.svg");
+            transition: all .3s ease-in;
+          }
+        }
+      }
+    }
+
+    .manager {
+      .imgWrapper {
+        .managerImg {
+          @include img(15px, 15px);
+          background: url("../../../assets/images/icons/manager.svg");
+        }
+
+        &:hover {
+          .managerImg {
+            background: url("../../../assets/images/icons/manager_hover.svg");
+            transition: all .3s ease-in;
+          }
+        }
+      }
+    }
+
+    .desk {
+      .imgWrapper {
+        .deskImg {
+          @include img(15px, 15px);
+          background: url("../../../assets/images/icons/country.svg");
+        }
+
+        &:hover {
+          .deskImg {
+            background: url("../../../assets/images/icons/country_hover.svg");
+            transition: all .3s ease-in;
+          }
+        }
+      }
+    }
+
+    .imgWrapper {
+      margin-right: 10px;
+      @include imgWrapper();
+    }
+  }
+}

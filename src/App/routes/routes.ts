@@ -8,6 +8,7 @@ import Transactions from '../pages/Transactions/Transactions'
 import Calendar from '../pages/Calendar/Calendar'
 import Banners from '../pages/Banners/Banners'
 import Settings from "../pages/Settings/Settings";
+import Profile from "../pages/Profile/Profile";
 
 
 type Page = {
@@ -51,5 +52,9 @@ export const pages: Array<Page> = [
     {
         path: '/settings',
         Component: Settings
+    },
+    {
+        path: '/profile/:userId',
+        Component: Profile
     }
 ]

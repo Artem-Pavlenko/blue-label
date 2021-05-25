@@ -158,3 +158,22 @@
   padding-bottom: 20px;
   margin-bottom: 19px;
 }
+
+@mixin img($width, $height) {
+  width: $width;
+  height: $height;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all .3s ease-out;
+}
+
+@mixin imgWrapper () {
+  @include flexCenter();
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 0.5px solid var(--primary-blue);
+  background: var(--gray036);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(50, 50, 71, 0.006);
+  border-radius: 15px;
+}

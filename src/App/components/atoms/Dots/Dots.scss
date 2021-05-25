@@ -1,0 +1,16 @@
+
+.dots {
+  width: 30px;
+  height: 30px;
+  margin-left: 23px;
+  margin-right: 30px;
+  cursor: pointer;
+  background: url("../../../assets/images/icons/dots.svg") center no-repeat;
+  border: 1px solid var(--secondary-border);
+  border-radius: 4px;
+  transition: all .3s ease-out;
+  &:hover {
+    border-color: var(--primary-hovered-border);
+    transition: all .3s ease-in;
+  }
+}

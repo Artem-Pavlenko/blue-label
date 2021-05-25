@@ -49,7 +49,7 @@ const LeadListItem: React.FC<Lead> = (props) => {
     return (
         <div className={s.leadListItem}>
             <div className={s.lead}>
-                <Checkbox text={lead} id={id} item/>
+                <Checkbox params={id} text={lead} id={id} item/>
             </div>
             <div className={s.id}>
                 {id}

@@ -26,7 +26,7 @@
     &.checked {
       cursor: default;
       color: var(--white);
-      background: rgba(120, 120, 128, 0.36);
+      background:var(--gray036);
       box-sizing: border-box;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(50, 50, 71, 0.006);
       border-radius: 15px;
