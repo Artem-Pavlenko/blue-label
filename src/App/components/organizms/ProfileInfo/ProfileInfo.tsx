@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
+import OverviewProfile from '../../molecules/UserProfile/OverviewProfile/OverviewProfile'
 import ProfileNavBar from '../../atoms/ProfileNavBar/ProfileNavBar'
-import OverviewProfile from '../../molecules/OverviewProfile/OverviewProfile'
+import Details from '../../molecules/UserProfile/Details/Details'
 import s from './ProfileInfo.module.scss'
 
 export type Navbar = 'Overview' | 'Details' | 'Notes' | 'Finance' | 'Documents' | 'Campaigns' | 'Event Log'
@@ -11,11 +12,11 @@ const ProfileInfo = () => {
     const showSectionInfo = () => {
         switch (checkedSection) {
             case "Overview":
-                return <OverviewProfile />
+                return <OverviewProfile/>
             case "Details":
-                return
+                return <Details/>
             default:
-                return <OverviewProfile />
+                return <OverviewProfile/>
         }
     }
 

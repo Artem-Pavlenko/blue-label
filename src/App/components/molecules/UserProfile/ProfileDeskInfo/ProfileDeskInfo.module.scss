@@ -1,5 +1,5 @@
-@import "src/App/common/style/mixins";
-@import "src/App/common/style/variables";
+@import "../../../../common/style/mixins";
+@import "../../../../common/style/variables";
 
 
 .profileDesk {
@@ -30,12 +30,12 @@
       .imgWrapper {
         .ownerImg {
           @include img(15px, 15px);
-          background: url("../../../assets/images/icons/owner.svg");
+          background: url("../../../../assets/images/icons/owner.svg");
         }
 
         &:hover {
           .ownerImg {
-            background: url("../../../assets/images/icons/owner_hover.svg");
+            background: url("../../../../assets/images/icons/owner_hover.svg");
             transition: all .3s ease-in;
           }
         }
@@ -46,12 +46,12 @@
       .imgWrapper {
         .managerImg {
           @include img(15px, 15px);
-          background: url("../../../assets/images/icons/manager.svg");
+          background: url("../../../../assets/images/icons/manager.svg");
         }
 
         &:hover {
           .managerImg {
-            background: url("../../../assets/images/icons/manager_hover.svg");
+            background: url("../../../../assets/images/icons/manager_hover.svg");
             transition: all .3s ease-in;
           }
         }
@@ -62,12 +62,12 @@
       .imgWrapper {
         .deskImg {
           @include img(15px, 15px);
-          background: url("../../../assets/images/icons/country.svg");
+          background: url("../../../../assets/images/icons/country.svg");
         }
 
         &:hover {
           .deskImg {
-            background: url("../../../assets/images/icons/country_hover.svg");
+            background: url("../../../../assets/images/icons/country_hover.svg");
             transition: all .3s ease-in;
           }
         }
