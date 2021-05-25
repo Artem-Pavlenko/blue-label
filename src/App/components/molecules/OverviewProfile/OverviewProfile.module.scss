@@ -1,0 +1,104 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+$margin: 30px;
+
+@mixin overviewTitle () {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: var(--secondary-gray);
+}
+
+.overviewProfile {
+  @include flex(flex-start, flex-start);
+  width: 100%;
+
+  .blockA, .blockB {
+    h3 {
+      margin: 0;
+      padding: 11px 10px 5px $margin;
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 54px;
+      color: var(--white);
+      border-bottom: 1px solid var(--secondary-border);
+    }
+    .wrapper {
+      padding: 17px 10px 35px $margin;
+    }
+
+    .title {
+      @include overviewTitle();
+    }
+  }
+
+  .blockA {
+    width: calc(50% - #{$margin / 2});
+    margin-right: $margin;
+
+    .information, .verificationHistory, .pinnedNote {
+      background: var(--primary-dark-gray);
+      margin-bottom: $margin;
+      box-shadow: $boxShadow;
+    }
+
+    .information {
+      min-height: 300px;
+      .wrapper {
+        .infoItem {
+          margin-bottom: 25px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          span {
+            display: block;
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            color: #D5D5D5;
+            opacity: 0.8;
+          }
+
+          .title {
+            @include overviewTitle();
+          }
+        }
+      }
+    }
+    .verificationHistory {
+      min-height: 175px;
+      .wrapper {
+        span {
+          @include overviewTitle();
+        }
+      }
+    }
+    .pinnedNote {
+      min-height: 180px;
+    }
+  }
+
+  .blockB {
+    box-shadow: $boxShadow;
+    min-height: 739px;
+    background: var(--primary-dark-gray);
+    width: calc(50% - #{$margin / 2});
+    .wrapper {
+      .item {
+        margin-bottom: 21px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        .finance {
+          font-size: 20px;
+          line-height: 31px;
+          letter-spacing: 0.02em;
+          color: var(--white);
+          opacity: 0.8;
+          display: block;
+        }
+      }
+    }
+  }
+}
