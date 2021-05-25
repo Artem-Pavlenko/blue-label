@@ -6,11 +6,14 @@ $contactMargin: 22px;
 $blockPadding: 19px 15px 19px 22px;
 
 .clientInfo {
+  @include flex(flex-start, flex-start);
   width: 100%;
   margin-right: $marginRight;
 
   .mainInfo {
-    width: calc(33.3% - #{$marginRight});
+    margin-right: $marginRight;
+    width: calc(33% - #{$marginRight});
+    min-width: 420px;
 
     .mainInfoBody {
       box-shadow: -1px 8px 12px 2px rgba(0, 0, 0, 0.46);
@@ -159,7 +162,7 @@ $blockPadding: 19px 15px 19px 22px;
   }
 
   .moreInfo {
-
+    width: 67%;
   }
 }
 

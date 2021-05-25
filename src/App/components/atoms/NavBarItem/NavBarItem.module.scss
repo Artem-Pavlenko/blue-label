@@ -1,17 +1,6 @@
 @import "src/App/common/style/mixins";
 @import "src/App/common/style/variables";
 
-@mixin hoverActiveLink() {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  left: -5%;
-  width: 110%;
-  height: 2px;
-  background: linear-gradient(206.97deg, var(--primary-purple) -1.5%, var(--primary-blue) 65.04%);
-  border-radius: 15px;
-  animation: hoverActive .5s ease-in forwards;
-}
 
 .navBarItem {
   @include flexCenter();

@@ -1,0 +1,30 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.profileNavbar {
+  @include flex(space-between, flex-start);
+  width: 100%;
+  height: $navbarHeight;
+  margin-bottom: $navbarMarginBottom;
+  padding: 49px 20px 0 20px;
+  background: var(--primary-dark-gray);
+  box-shadow: $boxShadow;
+
+  span {
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--gray);
+    &.current {
+      color: var(--white);
+      transition: all .3s ease-in;
+      &:after {
+        @include hoverActiveLink();
+      }
+    }
+  }
+}

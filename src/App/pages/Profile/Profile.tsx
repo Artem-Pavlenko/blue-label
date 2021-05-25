@@ -5,6 +5,7 @@ import ProfileDeskInfo from '../../components/molecules/ProfileDeskInfo/ProfileD
 import DropDawnList from '../../components/atoms/DropDawnList/DropDawnList'
 import s from './Profile.module.scss'
 import './Profile.scss'
+import ProfileInfo from "../../components/organizms/ProfileInfo/ProfileInfo";
 
 
 const Profile = () => {
@@ -67,7 +68,7 @@ const Profile = () => {
                     </div>
                 </section>
                 <section className={s.moreInfo}>
-
+                    <ProfileInfo />
                 </section>
             </article>
             <footer className={s.profileFooter}>
