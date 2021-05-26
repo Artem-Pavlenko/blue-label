@@ -1,12 +1,12 @@
 import React from 'react'
+import Note, {NoteType} from '../../../atoms/ClientProfile/Note/Note'
+import PinnedNote from '../../../atoms/ClientProfile/PinnedNote/PinnedNote'
+import Textarea from '../../../atoms/Tags/Textarea/Textarea'
 import s from './Notes.module.scss'
-import PinnedNote from "../../../atoms/ClientProfile/PinnedNote/PinnedNote";
-import Textarea from "../../../atoms/Tags/Textarea/Textarea";
 
 
 const Notes = () => {
-
-    const notes = [
+    const notes: NoteType[] = [
         {
             writeBy: 'Nasia Kounouni',
             note: 'the client had settlement please do not contact!!!',
@@ -35,7 +35,7 @@ const Notes = () => {
         {writeBy: 'Nasia Kounouni', note: 'na 3.1', date: '3 months ago', id: '16'},
         {writeBy: 'Nasia Kounouni', note: 'he will send 500 tomorrow with 20% Bonus', date: '3 months ago', id: '17'},
         {writeBy: 'Lukas Engel', note: 'has still no money YGB next campaign', date: '3 months ago', id: '18'},
-        {writeBy: 'Lukas Engel', note: 'na 3.1', date: '', id: ''},
+        {writeBy: 'Lukas Engel', note: 'na 3.1', date: '3 months ago', id: '19'}
     ]
 
     return (
@@ -50,7 +50,7 @@ const Notes = () => {
                 </div>
             </div>
             <div className={s.notes}>
-
+                {notes.map(note => <Note key={note.id} {...note}/>)}
             </div>
         </div>
     )
