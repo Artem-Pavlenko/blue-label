@@ -1,9 +1,9 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
-import ClientProfileHeader from '../../components/atoms/ClientProfileHeader/ClientProfileHeader'
-import ProfileDeskInfo from '../../components/molecules/UserProfile/ProfileDeskInfo/ProfileDeskInfo'
+import ClientProfileHeader from '../../components/atoms/ClientProfile/ClientProfileHeader/ClientProfileHeader'
+import ProfileDeskInfo from '../../components/molecules/ClientProfile/ProfileDeskInfo/ProfileDeskInfo'
 import ProfileInfo from '../../components/organizms/ProfileInfo/ProfileInfo'
-import DropDawnList from '../../components/atoms/DropDawnList/DropDawnList'
+import DropDawnList from '../../components/atoms/Tags/DropDawnList/DropDawnList'
 import s from './Profile.module.scss'
 import './Profile.scss'
 

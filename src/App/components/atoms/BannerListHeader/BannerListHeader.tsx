@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './BannerListHeader.module.scss'
-import Checkbox from "../Checkbox/Checkbox";
+import Checkbox from "../Tags/Checkbox/Checkbox";
 
 
 const BannerListHeader = () => {

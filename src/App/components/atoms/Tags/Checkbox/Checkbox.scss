@@ -1,31 +1,27 @@
-@import "src/App/common/style/variables";
-@import "src/App/common/style/mixins";
 
-
-.checkBoxSquare {
+.checkbox {
   display: inline-block;
   position: relative;
   padding-left: 64px;
   cursor: pointer;
+
   &:hover {
-    .square {
-      &:after {
-        background: #4F4F4F;
-        //transition: all .1s ease-in;
+    label {
+      &:before {
+        background: var(--primary-gray);
       }
     }
   }
 
-  .checkBoxSquareInput {
+  .checkboxInput {
     position: absolute;
     appearance: none;
     -webkit-appearance: none;
+
     &:checked {
-      + .square {
+      + .label {
         &:before {
-          background: url("../../../assets/images/icons/check.svg") center no-repeat;
-          top: 0;
-          left: 25px;
+          background: url("../../../../assets/images/icons/check.svg") center no-repeat;
         }
 
         &:after {
@@ -33,15 +29,18 @@
         }
       }
     }
-
   }
-  .square {
+
+  .label {
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.2px;
     color: var(--white);
+    &.item {
+      text-decoration: underline;
+    }
 
     &:after {
       position: absolute;
@@ -49,11 +48,12 @@
       top: 0;
       left: 24px;
       z-index: 1;
-      width: 21px;
-      height: 21px;
-      background: var(--secondary-dark-gray);
-      border-radius: 5px;
+      width: 20px;
+      height: 20px;
+      background: var(--primary-gray);
+      border-radius: 50%;
       cursor: pointer;
+      transition: all .3s ease-out;
     }
 
     &:before {
@@ -62,10 +62,11 @@
       top: 2px;
       left: 26px;
       z-index: 2;
-      width: 21px;
-      height: 21px;
-      border-radius: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
       cursor: pointer;
+      background: var(--primary-dark-gray);
     }
   }
 }

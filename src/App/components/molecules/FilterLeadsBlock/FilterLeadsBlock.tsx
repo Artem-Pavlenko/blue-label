@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import SearchInput from "../../atoms/Searchinput/SearchInput";
+import SearchInput from "../../atoms/Tags/SearchInput/SearchInput";
 import s from './FilterLeadsBlock.module.scss'
 
 

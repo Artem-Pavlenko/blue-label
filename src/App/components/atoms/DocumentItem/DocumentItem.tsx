@@ -1,5 +1,5 @@
 import React from 'react'
-import Checkbox from '../Checkbox/Checkbox'
+import Checkbox from '../Tags/Checkbox/Checkbox'
 import downloadFileImg from '../../../assets/images/icons/download_file.svg'
 import s from './DocumentItem.module.scss'
 import './DocumentItem.scss'

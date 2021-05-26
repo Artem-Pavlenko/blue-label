@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import CheckboxSquare from '../CheckboxSquare/CheckboxSquare'
+import CheckboxSquare from '../Tags/CheckboxSquare/CheckboxSquare'
 import s from './NotificationListItem.module.scss'
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Checkbox from '../Checkbox/Checkbox'
+import Checkbox from '../Tags/Checkbox/Checkbox'
 import s from './LeadListItem.module.scss'
 
 export type Lead = {

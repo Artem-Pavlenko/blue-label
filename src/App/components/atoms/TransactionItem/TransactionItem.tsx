@@ -1,6 +1,6 @@
 import React from 'react'
 import {Transaction} from '../../organizms/TransactionsList/TransactionsList'
-import Checkbox from '../Checkbox/Checkbox'
+import Checkbox from '../Tags/Checkbox/Checkbox'
 import s from './TransactionItem.module.scss'
 
 

@@ -1,4 +1,4 @@
-@import "src/App/common/style/mixins";
+@import "../../../../common/style/mixins";
 
 
 .searchInput {
@@ -42,11 +42,11 @@
     cursor: pointer;
     width: 24px;
     height: 24px;
-    background: url("../../../assets/images/icons/search.svg") center no-repeat;
+    background: url("../../../../assets/images/icons/search.svg") center no-repeat;
     transition: all .3s ease-out;
 
     &:hover {
-      background: url("../../../assets/images/icons/search_hover.svg") center no-repeat;
+      background: url("../../../../assets/images/icons/search_hover.svg") center no-repeat;
       transition: all .3s ease-in;
     }
   }

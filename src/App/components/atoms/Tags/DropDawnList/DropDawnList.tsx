@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react'
-import {useOutsideListener} from '../../../hooks/useOutsideListener'
-import arrowImg from '../../../assets/images/icons/arrow_down_color.svg'
+import {useOutsideListener} from '../../../../hooks/useOutsideListener'
+import arrowImg from '../../../../assets/images/icons/arrow_down_color.svg'
 import './DropDawnList.scss'
 
 export type DropDawnListItem = {

@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import OverviewProfile from '../../molecules/UserProfile/OverviewProfile/OverviewProfile'
-import ProfileNavBar from '../../atoms/ProfileNavBar/ProfileNavBar'
-import Details from '../../molecules/UserProfile/Details/Details'
+import OverviewProfile from '../../molecules/ClientProfile/OverviewProfile/OverviewProfile'
+import ProfileNavBar from '../../atoms/ClientProfile/ProfileNavBar/ProfileNavBar'
+import Details from '../../molecules/ClientProfile/Details/Details'
+import Notes from '../../molecules/ClientProfile/Notes/Notes'
 import s from './ProfileInfo.module.scss'
 
 export type Navbar = 'Overview' | 'Details' | 'Notes' | 'Finance' | 'Documents' | 'Campaigns' | 'Event Log'
@@ -15,6 +16,8 @@ const ProfileInfo = () => {
                 return <OverviewProfile/>
             case "Details":
                 return <Details/>
+            case "Notes":
+                return <Notes/>
             default:
                 return <OverviewProfile/>
         }

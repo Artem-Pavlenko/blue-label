@@ -1,7 +1,8 @@
-@import "src/App/common/style/variables";
-@import "src/App/common/style/variables";
+@import "../../../../common/style/variables";
+@import "../../../../common/style/variables";
 
 .pinnedNote {
+  width: 100%;
   background: var(--primary-dark-gray);
   margin-bottom: $profileMarginBlock;
   box-shadow: $boxShadow;

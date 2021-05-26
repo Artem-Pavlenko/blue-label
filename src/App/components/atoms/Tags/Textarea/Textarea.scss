@@ -1,0 +1,20 @@
+@import "../../../../common/style/mixins";
+@import "../../../../common/style/variables";
+
+.textareaWrapper {
+  width: 100%;
+
+  label {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.4px;
+    color: var(--secondary-gray);
+  }
+
+  textarea {
+    @include input();
+    resize: vertical;
+    margin-top: 5px;
+    min-height: 55px;
+  }
+}

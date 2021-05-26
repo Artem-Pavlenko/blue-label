@@ -1,6 +1,6 @@
 import React from 'react'
-import Dots from '../Dots/Dots'
-import germanyImg from '../../../assets/images/icons/germany_icon.svg'
+import Dots from '../../Dots/Dots'
+import germanyImg from '../../../../assets/images/icons/germany_icon.svg'
 import s from './ClientProfileHeader.module.scss'
 
 type ProfileHeader = {

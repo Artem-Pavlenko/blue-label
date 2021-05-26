@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar} from '../../organizms/ProfileInfo/ProfileInfo'
+import {Navbar} from '../../../organizms/ProfileInfo/ProfileInfo'
 import cn from 'classnames'
 import s from './ProfileNavBar.module.scss'
 

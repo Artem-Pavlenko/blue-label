@@ -1,6 +1,6 @@
 import React from 'react'
+import PinnedNote from '../../../atoms/ClientProfile/PinnedNote/PinnedNote'
 import s from './OverviewProfile.module.scss'
-import PinnedNote from "../../../atoms/PinnedNote/PinnedNote";
 
 
 const OverviewProfile = () => {

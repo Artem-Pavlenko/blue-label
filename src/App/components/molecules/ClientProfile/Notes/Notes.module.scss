@@ -1,0 +1,35 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.notesBlock {
+  width: 100%;
+
+  .newNoteWrapper {
+    width: 100%;
+    @include flex(flex-start, flex-start);
+    margin-right: $profileMarginBlock;
+  }
+
+  .newNote {
+    width: calc(50% - #{$profileMarginBlock / 2});
+    box-shadow: $boxShadow;
+    margin-right: $profileMarginBlock;
+    padding: 8.5px 17px 17px 15px;
+    background: var(--primary-dark-gray);
+    min-height: 178px;
+
+    button {
+      @include button();
+      margin-top: 17px;
+      width: 100%;
+    }
+  }
+
+  .pinnedNotesWrapper {
+    width: calc(50% - #{$profileMarginBlock / 2});
+  }
+
+  .notes {
+
+  }
+}
