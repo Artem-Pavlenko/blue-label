@@ -1,0 +1,48 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.documentsBlock {
+  width: 100%;
+
+  .documents {
+    min-height: 250px;
+    @include flex(flex-start, flex-start);
+
+    .uploadDocument {
+      box-shadow: $boxShadow;
+      background: var(--primary-dark-gray);
+      min-height: 178px;
+      width: calc(50% - #{$profileMarginBlock / 2});
+      margin-right: $profileMarginBlock;
+
+      h3 {
+        @include headerTitle();
+      }
+
+      .wrapper {
+        @include flex(flex-start, flex-start);
+        padding: 13px 15px 19px;
+
+        .docTypeList {
+          width: calc(50% - #{$profileMarginBlock / 2});
+          margin-right: $profileMarginBlock;
+        }
+
+        .fileUpload {
+          width: calc(50% - #{$profileMarginBlock / 2});
+        }
+      }
+
+      button {
+        @include button();
+        width: calc(100% - 30px);
+        margin: 0 15px 19px;
+      }
+    }
+
+    .docPinnedNote {
+      min-height: 246px;
+      width: calc(50% - #{$profileMarginBlock / 2});
+    }
+  }
+}

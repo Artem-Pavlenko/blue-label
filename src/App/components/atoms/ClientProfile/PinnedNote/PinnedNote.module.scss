@@ -1,21 +1,15 @@
-@import "../../../../common/style/variables";
+@import "../../../../common/style/mixins";
 @import "../../../../common/style/variables";
 
 .pinnedNote {
   width: 100%;
-  background: var(--primary-dark-gray);
-  margin-bottom: $profileMarginBlock;
-  box-shadow: $boxShadow;
+  height: 100%;
   min-height: 178px;
+  background: var(--primary-dark-gray);
+  box-shadow: $boxShadow;
 
   h3 {
-    margin: 0;
-    padding: 11px 10px 5px $profileMarginBlock;
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 54px;
-    color: var(--white);
-    border-bottom: 1px solid var(--secondary-border);
+    @include headerTitle();
   }
 
   .wrapper {

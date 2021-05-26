@@ -2,9 +2,13 @@ import React from 'react'
 import s from './PinnedNote.module.scss'
 
 
-const PinnedNote = () => {
+type PinnedType = {
+    className?: string
+}
+
+const PinnedNote: React.FC<PinnedType> = ({className}) => {
     return (
-        <div className={s.pinnedNote}>
+        <div className={`${s.pinnedNote} ${className}`}>
             <h3>Pinned Note</h3>
             <div className={s.wrapper}>
                 <span className={s.title}>NO PINNED NOTE</span>

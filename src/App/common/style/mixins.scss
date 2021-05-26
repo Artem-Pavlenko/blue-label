@@ -189,3 +189,12 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(50, 50, 71, 0.006);
   border-radius: 15px;
 }
+
+@mixin headerTitle () {
+  padding: 11px 10px 5px $profileMarginBlock;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 54px;
+  color: var(--white);
+  border-bottom: 1px solid var(--secondary-border);
+}

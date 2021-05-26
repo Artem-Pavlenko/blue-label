@@ -7,7 +7,7 @@
   .newNoteWrapper {
     width: 100%;
     @include flex(flex-start, flex-start);
-    margin-right: $profileMarginBlock;
+    margin-bottom: $profileMarginBlock;
   }
 
   .newNote {
