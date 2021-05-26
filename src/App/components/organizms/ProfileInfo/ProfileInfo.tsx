@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import OverviewProfile from '../../molecules/ClientProfile/OverviewProfile/OverviewProfile'
 import ProfileNavBar from '../../atoms/ClientProfile/ProfileNavBar/ProfileNavBar'
 import Details from '../../molecules/ClientProfile/Details/Details'
+import Finance from '../../molecules/ClientProfile/Finance/Finance'
 import Notes from '../../molecules/ClientProfile/Notes/Notes'
 import s from './ProfileInfo.module.scss'
-import Finance from "../../molecules/ClientProfile/Finance/Finance";
 
 export type Navbar = 'Overview' | 'Details' | 'Notes' | 'Finance' | 'Documents' | 'Campaigns' | 'Event Log'
 
