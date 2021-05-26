@@ -1,6 +1,76 @@
 @import 'src/App/common/style/variables';
 @import 'src/App/common/style/mixins';
 
-.details {
+$userDataMinHeight: 385px;
 
+@mixin detailBlock () {
+  box-shadow: $boxShadow;
+  padding: $detailsBlockPadding;
+  background: var(--primary-dark-gray);
+}
+
+.details {
+  @include flex(flex-start, flex-start);
+  width: 100%;
+
+  .blockA, .blockB {
+    width: calc(50% - #{$profileMarginBlock / 2});
+  }
+
+  .blockA {
+    margin-right: $profileMarginBlock;
+
+    .userDataA, .affiliateInfo {
+      @include detailBlock();
+    }
+
+    .userDataA {
+      min-height: $userDataMinHeight;
+      margin-bottom: $profileMarginBlock;
+      @include flex(flex-start, flex-start);
+      flex-wrap: wrap;
+    }
+
+    .affiliateInfo {
+      padding: 0;
+      min-height: 551px;
+
+      h3 {
+        margin: 0;
+        padding: 11px 10px 5px $profileMarginBlock;
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 54px;
+        color: var(--white);
+        border-bottom: 1px solid var(--secondary-border);
+      }
+      .fieldsBlock {
+        padding: $detailsBlockPadding;
+      }
+    }
+  }
+
+  .blockB {
+    .userDataB, .customFields {
+      @include detailBlock();
+      @include flex(flex-start, flex-start);
+      flex-wrap: wrap;
+    }
+
+    .userDataB {
+      flex-wrap: wrap;
+      min-height: $userDataMinHeight;
+      margin-bottom: $profileMarginBlock;
+    }
+
+    .customFields {
+      min-height: 330px;
+      margin-bottom: $profileMarginBlock;
+
+      button {
+        @include button();
+        width: 100%;
+      }
+    }
+  }
 }

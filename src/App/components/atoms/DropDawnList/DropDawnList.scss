@@ -18,6 +18,7 @@
   .checkedBlock {
     @include input();
     @include flex(space-between, center);
+    margin-top: 5px;
     width: 100%;
 
     .checked {

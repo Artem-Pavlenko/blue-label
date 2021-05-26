@@ -85,8 +85,11 @@ $typeWithdrawFree: 125px;
 $typeCreated: 106px;
 $typeActions: 90px;
 
-
 // user profile page
 $navbarHeight: 91px;
 $navbarMarginBottom: 29px;
 $profileMarginBlock: 30px;
+$overviewBlockPadding: 17px 16px 35px $profileMarginBlock;
+$detailsBlockPadding: 17px 15px $profileMarginBlock 15px;
+
+

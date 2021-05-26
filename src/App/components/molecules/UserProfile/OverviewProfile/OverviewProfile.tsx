@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './OverviewProfile.module.scss'
+import PinnedNote from "../../../atoms/PinnedNote/PinnedNote";
 
 
 const OverviewProfile = () => {
@@ -39,12 +40,7 @@ const OverviewProfile = () => {
                         <span className={s.title}>NO VERIFICATION HISTORY</span>
                     </div>
                 </div>
-                <div className={s.pinnedNote}>
-                    <h3>Pinned Note</h3>
-                    <div className={s.wrapper}>
-                        <span className={s.title}>NO PINNED NOTE</span>
-                    </div>
-                </div>
+                <PinnedNote/>
             </div>
             <div className={s.blockB}>
                 <h3>Financial Overview</h3>

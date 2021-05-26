@@ -2,10 +2,10 @@ import React from 'react'
 import {useParams} from 'react-router-dom'
 import ClientProfileHeader from '../../components/atoms/ClientProfileHeader/ClientProfileHeader'
 import ProfileDeskInfo from '../../components/molecules/UserProfile/ProfileDeskInfo/ProfileDeskInfo'
+import ProfileInfo from '../../components/organizms/ProfileInfo/ProfileInfo'
 import DropDawnList from '../../components/atoms/DropDawnList/DropDawnList'
 import s from './Profile.module.scss'
 import './Profile.scss'
-import ProfileInfo from "../../components/organizms/ProfileInfo/ProfileInfo";
 
 
 const Profile = () => {

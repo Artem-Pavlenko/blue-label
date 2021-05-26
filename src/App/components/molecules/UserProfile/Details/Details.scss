@@ -1,0 +1,16 @@
+$detailsUserDataMargin: 24px;
+
+.details {
+  .street, .city, .code, .country, .phone, .skype, .affiliate1, .affiliate2 {
+    width: calc(50% - #{$detailsUserDataMargin / 2});
+  }
+  .street, .code, .phone, .affiliate1 {
+    margin-right: $detailsUserDataMargin;
+  }
+  .affiliate1, .affiliate2 {
+    margin-bottom: 19px;
+  }
+  .affiliate {
+    margin-bottom: 14px;
+  }
+}
