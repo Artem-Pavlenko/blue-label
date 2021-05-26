@@ -50,7 +50,7 @@ const OverviewProfile = () => {
                 <h3>Financial Overview</h3>
                 <div className={s.wrapper}>
                     {
-                        financials.map(f => <div className={s.item}>
+                        financials.map(f => <div key={f.id} className={s.item}>
                             <span className={s.finance}>{f.finance}</span>
                             <span className={s.title}>{f.title}</span>
                         </div>)

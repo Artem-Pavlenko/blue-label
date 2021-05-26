@@ -1,7 +1,7 @@
 @import "../../../../common/style/mixins";
 @import "../../../../common/style/variables";
 
-$margin: 30px;
+
 
 @mixin overviewTitle () {
   font-size: 14px;
@@ -17,7 +17,7 @@ $margin: 30px;
   .blockA, .blockB {
     h3 {
       margin: 0;
-      padding: 11px 10px 5px $margin;
+      padding: 11px 10px 5px $profileMarginBlock;
       font-weight: 600;
       font-size: 35px;
       line-height: 54px;
@@ -25,7 +25,7 @@ $margin: 30px;
       border-bottom: 1px solid var(--secondary-border);
     }
     .wrapper {
-      padding: 17px 10px 35px $margin;
+      padding: 17px 10px 35px $profileMarginBlock;
     }
 
     .title {
@@ -34,12 +34,12 @@ $margin: 30px;
   }
 
   .blockA {
-    width: calc(50% - #{$margin / 2});
-    margin-right: $margin;
+    width: calc(50% - #{$profileMarginBlock / 2});
+    margin-right: $profileMarginBlock;
 
     .information, .verificationHistory, .pinnedNote {
       background: var(--primary-dark-gray);
-      margin-bottom: $margin;
+      margin-bottom: $profileMarginBlock;
       box-shadow: $boxShadow;
     }
 
@@ -75,7 +75,7 @@ $margin: 30px;
       }
     }
     .pinnedNote {
-      min-height: 180px;
+      min-height: 205px;
     }
   }
 
@@ -83,7 +83,7 @@ $margin: 30px;
     box-shadow: $boxShadow;
     min-height: 739px;
     background: var(--primary-dark-gray);
-    width: calc(50% - #{$margin / 2});
+    width: calc(50% - #{$profileMarginBlock / 2});
     .wrapper {
       .item {
         margin-bottom: 21px;
