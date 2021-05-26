@@ -4,11 +4,11 @@ import ClientProfileHeader from '../../components/atoms/ClientProfile/ClientProf
 import ProfileDeskInfo from '../../components/molecules/ClientProfile/ProfileDeskInfo/ProfileDeskInfo'
 import ProfileInfo from '../../components/organizms/ProfileInfo/ProfileInfo'
 import DropDawnList from '../../components/atoms/Tags/DropDawnList/DropDawnList'
-import s from './Profile.module.scss'
-import './Profile.scss'
+import s from './ClientProfile.module.scss'
+import './ClientProfile.scss'
 
 
-const Profile = () => {
+const ClientProfile = () => {
     const {userId} = useParams<{ userId: string }>()
 
     const statuses = [
@@ -78,4 +78,4 @@ const Profile = () => {
     )
 }
 
-export default Profile
+export default ClientProfile
