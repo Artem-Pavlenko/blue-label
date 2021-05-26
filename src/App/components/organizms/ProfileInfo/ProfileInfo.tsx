@@ -6,6 +6,7 @@ import Details from '../../molecules/ClientProfile/Details/Details'
 import Finance from '../../molecules/ClientProfile/Finance/Finance'
 import Notes from '../../molecules/ClientProfile/Notes/Notes'
 import s from './ProfileInfo.module.scss'
+import Campaigns from "../../molecules/ClientProfile/Campaigns/Campaigns";
 
 
 export type Navbar = 'Overview' | 'Details' | 'Notes' | 'Finance' | 'Documents' | 'Campaigns' | 'Event Log'
@@ -25,6 +26,8 @@ const ProfileInfo = () => {
                 return <Finance />
             case "Documents":
                 return <ClientProfileDocuments/>
+            case "Campaigns":
+                return <Campaigns/>
             default:
                 return <OverviewProfile/>
         }

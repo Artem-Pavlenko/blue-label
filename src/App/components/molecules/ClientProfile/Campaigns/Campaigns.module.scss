@@ -1,0 +1,21 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.campaigns {
+
+  .campaignsHeader {
+    @include flex(flex-end, center);
+    box-shadow: $boxShadow;
+    padding: 0 19px;
+    margin-bottom: $profileMarginBlock;
+    height: 60px;
+    background: var(--primary-dark-gray);
+    button {
+      @include button();
+      width: 230px;
+      &:first-of-type {
+        @include grayButton();
+      }
+    }
+  }
+}
