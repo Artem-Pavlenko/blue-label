@@ -31,11 +31,8 @@
         flex-direction: column;
         width: calc(20% - 15px);
         .title {
+          @include itemTitle(var(--secondary-gray));
           width: 100%;
-          font-size: 14px;
-          line-height: 21px;
-          letter-spacing: 0.02em;
-          color: #65656A;
         }
         .count {
           font-size: 20px;

@@ -198,3 +198,10 @@
   color: var(--white);
   border-bottom: 1px solid var(--secondary-border);
 }
+
+@mixin itemTitle($color) {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  color: $color;
+}

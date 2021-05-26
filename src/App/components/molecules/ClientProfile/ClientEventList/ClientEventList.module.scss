@@ -1,0 +1,30 @@
+@import "src/App/common/style/mixins";
+@import "src/App/common/style/variables";
+
+.clientEventList {
+  box-shadow: $boxShadow;
+  background: var(--list-background);
+  overflow-x: auto;
+  max-height: 590px;
+  width: 100%;
+  .event {
+    @include flex(space-between, flex-start);
+    cursor: pointer;
+    height: 58px;
+    padding: 6px 18px 38px;
+    &:hover {
+      background: linear-gradient(180deg, rgba(94, 92, 230, 0.15) 0%, rgba(186, 92, 230, 0.15) 141.68%);
+    }
+    .eventInfo {
+      p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--white);
+      }
+      span {
+        @include itemTitle(var(--secondary-gray));
+      }
+    }
+  }
+}

@@ -1,12 +1,6 @@
 @import "src/App/common/style/mixins";
 @import "src/App/common/style/variables";
 
-@mixin noteItem ($color) {
-  font-size: 14px;
-  line-height: 21px;
-  letter-spacing: 0.2px;
-  color: $color;
-}
 
 .noteWrapper {
   @include flex(space-between, center);
@@ -17,21 +11,20 @@
   cursor: pointer;
   &:hover {
     background: linear-gradient(180deg, rgba(94, 92, 230, 0.15) 0%, rgba(186, 92, 230, 0.15) 141.68%);
-
   }
   .noteBlock {
     @include flex(flex-start, flex-start);
     flex-direction: column;
     .writeBy {
-      @include noteItem(#65656A);
+      @include itemTitle(#65656A);
     }
     .note {
-      @include noteItem(var(--white));
+      @include itemTitle(var(--white));
       margin: 0;
     }
   }
   .date {
-    @include noteItem(#77777D);
+    @include itemTitle(#77777D);
     padding-right: 24px;
   }
 }
