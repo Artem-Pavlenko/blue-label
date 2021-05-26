@@ -1,0 +1,84 @@
+@import "src/App/common/style/variables";
+@import "src/App/common/style/mixins";
+
+.finance {
+  width: 100%;
+  h3 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 54px;
+    color: var(--white);
+    border-bottom: 1px solid #3D3C41;
+    padding: 9px 9px 5px 21px;
+  }
+  .financialOverview, .graph, .transcriptions, .transcriptionsList {
+    background: var(--primary-dark-gray);
+    margin-bottom: $profileMarginBlock;
+    box-shadow: $boxShadow;
+  }
+  .financialOverview {
+    min-height: 295px;
+
+    .list {
+      @include flex(space-between, flex-start);
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 20px 30px 13px 30px;
+      .financeItem {
+        @include flex(flex-start, flex-start);
+        position: relative;
+        margin-bottom: 17px;
+        flex-direction: column;
+        width: calc(20% - 15px);
+        .title {
+          width: 100%;
+          font-size: 14px;
+          line-height: 21px;
+          letter-spacing: 0.02em;
+          color: #65656A;
+        }
+        .count {
+          font-size: 20px;
+          line-height: 31px;
+          letter-spacing: 0.02em;
+          color: var(--white);
+          opacity: 0.8;
+        }
+        img {
+          position: absolute;
+          top: 55%;
+          right: 0;
+        }
+      }
+    }
+  }
+  .graph {
+    min-height: 395px;
+    .graphWrapper {
+      padding: 24px 0 24px 19px;
+    }
+    .fakeGraph {
+
+    }
+  }
+  .transcriptions {
+    @include flex(space-between, center);
+    height: 60px;
+    padding: 0 10px 0 20px;
+
+    p {
+      margin: 0;
+      font-size: 20px;
+      line-height: 31px;
+      color: var(--white);
+    }
+    button {
+      @include button();
+      width: 205px;
+    }
+  }
+  .transcriptionsList {
+    max-height: 680px;
+    background: none;
+  }
+}

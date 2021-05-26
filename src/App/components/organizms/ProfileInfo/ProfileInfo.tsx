@@ -4,6 +4,7 @@ import ProfileNavBar from '../../atoms/ClientProfile/ProfileNavBar/ProfileNavBar
 import Details from '../../molecules/ClientProfile/Details/Details'
 import Notes from '../../molecules/ClientProfile/Notes/Notes'
 import s from './ProfileInfo.module.scss'
+import Finance from "../../molecules/ClientProfile/Finance/Finance";
 
 export type Navbar = 'Overview' | 'Details' | 'Notes' | 'Finance' | 'Documents' | 'Campaigns' | 'Event Log'
 
@@ -18,6 +19,8 @@ const ProfileInfo = () => {
                 return <Details/>
             case "Notes":
                 return <Notes/>
+            case "Finance":
+                return <Finance />
             default:
                 return <OverviewProfile/>
         }

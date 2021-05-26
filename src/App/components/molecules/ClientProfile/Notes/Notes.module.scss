@@ -31,7 +31,7 @@
 
   .notes {
     box-shadow: $boxShadow;
-    background: rgba(44, 44, 46, 0.8);
+    background: var(--list-background);
     max-height: 540px;
     overflow-x: auto;
   }

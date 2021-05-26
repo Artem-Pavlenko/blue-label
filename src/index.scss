@@ -70,7 +70,7 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  //margin: 0;
+  margin: 0;
 }
 
 h1 {
@@ -114,4 +114,5 @@ h6 {
   --secondary-border: #3D3C41;
   --primary-hovered-border: #818181;
   --error-red: #D73B3B;
+  --list-background: rgba(44, 44, 46, 0.8);
 }

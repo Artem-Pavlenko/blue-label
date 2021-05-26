@@ -91,7 +91,6 @@ const TransactionsList = () => {
         },
     ]
 
-
     return (
         <div className={s.transactionList}>
             <div className={s.list}>
